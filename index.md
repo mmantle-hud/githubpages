@@ -4,7 +4,7 @@ title: Test
 ---
 
 
-## SQL
+# SQL
 SQL is the language used to interact with a relational database. 
 
 There are minor differences between database management systems, but the core parts of the language that we will learn work across all database management systems e.g. Oracle, SQLServer, MySQL. 
