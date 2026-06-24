@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: default
 title: Test 
-permalink: /index
 ---
+
 
 ## SQL
 SQL is the language used to interact with a relational database. 
