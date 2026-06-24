@@ -1,20 +1,10 @@
 ---
 layout: jekyll-theme-minimal
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-</head>
-<body>
-  <!-- Your markdown content renders here -->
-  {{ content }}
+<header>
+  <strong>Welcome to My Course Materials</strong>
+  <hr>
+</header>
 
-  <!-- Run Mermaid scripts dynamically -->
-  <script type="module">
-    import mermaid from 'https://jsdelivr.net';
-    mermaid.initialize({ startOnLoad: true, theme: 'default' });
-  </script>
-</body>
-</html>
+{{ content }}
+
