@@ -1,21 +1,13 @@
 ---
-layout: default
+layout: page
 title: Test 
+permalink: /index
 ---
-
-## slide
-
-- I think I need calculations in here e.g. updating a balance
-- Where do I put entities tables representing entities etc.I think I have this in the introduction. I probably need to re-iterate.
-- Shorthands e.g. for select and insert. 
-- More on data types or do I get them to research this e.g. year for year of release. 
 
 ## SQL
 SQL is the language used to interact with a relational database. 
 
 There are minor differences between database management systems, but the core parts of the language that we will learn work across all database management systems e.g. Oracle, SQLServer, MySQL. 
-
-<!-- It is a standardised, common language that all relational database systems use. Nobody owns it.  -->
 
 The SQL language is made up of four distinct parts:-
 
