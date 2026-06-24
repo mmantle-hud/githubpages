@@ -69,6 +69,7 @@ The basic rule is we should choose the most specific and smallest data type. For
 
 
 ```mermaid
+
 classDiagram 
     accTitle: Conceptual ERD showing Country and City
     accDescr: Shows the Country and City entities
@@ -86,6 +87,11 @@ classDiagram
 ```
 
 <pre class="mermaid">
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
 classDiagram 
     accTitle: Conceptual ERD showing Country and City
     accDescr: Shows the Country and City entities
