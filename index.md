@@ -85,6 +85,23 @@ classDiagram
     }
 ```
 
+<pre class="mermaid">
+classDiagram 
+    accTitle: Conceptual ERD showing Country and City
+    accDescr: Shows the Country and City entities
+    City --> Country : located in
+    class Country{
+      name
+      population
+      currency
+    }
+    class City{
+        name
+        is capital
+        average temperature
+    }
+</pre>
+
 ## Primary Key
 
 When performing an operation such as update or delete, we need to specify which row we want to affect. If we aren't completely clear about which row we are referring to, we could accidentally change or delete the wrong row. For this reason each row needs a unique identifier. We call this a **primary key**. 
