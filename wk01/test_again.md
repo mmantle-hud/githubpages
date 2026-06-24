@@ -1,7 +1,7 @@
 
 ---
 layout: default
-title: Test Memaid
+title: Test Mermaid
 ---
 # Test Again
 Can I add another markdown file?
