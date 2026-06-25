@@ -68,43 +68,56 @@ There are lots of data types we can use for text, numbers and dates. I won't go 
 The basic rule is we should choose the most specific and smallest data type. For example, there is a TEXT data type which has unlimited length and is used for long descriptions e.g. if storing a news article. We choose VARCHAR(255) because it clearly indicates a small string, but is flexible enough to support different length names. 
 
 
-```mermaid
+<pre class="mermaid">
+erDiagram 
+    direction LR
+    countries||--o{cities : ""
 
-classDiagram 
-    accTitle: Conceptual ERD showing Country and City
-    accDescr: Shows the Country and City entities
-    City --> Country : located in
-    class Country{
-      name
-      population
-      currency
+    cities{
+        INT city_id PK
+        VARCHAR(255) city_name 
+        BOOLEAN is_capital "DEFAULT false"
+        NUMERIC avg_temp
+        INT country_id FK
     }
-    class City{
-        name
-        is capital
-        average temperature
+    countries{
+        INT country_id PK
+        VARCHAR(255) country_name
+        BIGINT population
+        CHAR(3) currency_code
     }
-```
+</pre>
+
 
 <pre class="mermaid">
 ---
 config:
-  look: handDrawn
-  theme: neutral
+  theme: 'base'
+  themeVariables:
+    primaryColor: '#b0dac6'
+    primaryTextColor: '#000000'
+    primaryBorderColor: '#159957'
+    lineColor: '#000000'
+    secondaryColor: '#006100'
+    tertiaryColor: '#fff'
 ---
-classDiagram 
-    accTitle: Conceptual ERD showing Country and City
-    accDescr: Shows the Country and City entities
-    City --> Country : located in
-    class Country{
-      name
-      population
-      currency
+
+erDiagram 
+    direction LR
+    countries||--o{cities : ""
+
+    cities{
+        INT city_id PK
+        VARCHAR(255) city_name 
+        BOOLEAN is_capital "DEFAULT false"
+        NUMERIC avg_temp
+        INT country_id FK
     }
-    class City{
-        name
-        is capital
-        average temperature
+    countries{
+        INT country_id PK
+        VARCHAR(255) country_name
+        BIGINT population
+        CHAR(3) currency_code
     }
 </pre>
 

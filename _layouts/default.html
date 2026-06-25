@@ -26,7 +26,28 @@
     </main>
    <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({ 
+      startOnLoad: true,
+
+      theme: 'base',
+      themeVariables:{
+        primaryColor: '#b0dac6'
+        primaryTextColor: '#000000'
+        primaryBorderColor: '#159957'
+        lineColor: '#000000'
+        secondaryColor: '#006100'
+        tertiaryColor: '#fff'
+        fontFamily: 'Roboto, sans-serif'
+      },
+
+      // For ERDs specifically: bypasses theme calculators to enforce table styles globally
+      themeCSS: `
+        .er.entityBox { fill: #159957 !important; stroke: #ff0000 !important; }
+        .er.attributeBoxOdd { fill: #00ff00 !important; }
+        .er.attributeBoxEven { fill: #0000ff !important; }
+      `
+  });
+  
   </script>
   </body>
 </html>
