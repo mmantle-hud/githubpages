@@ -90,18 +90,6 @@ erDiagram
 
 
 <pre class="mermaid">
----
-config:
-  theme: 'base'
-  themeVariables:
-    primaryColor: '#b0dac6'
-    primaryTextColor: '#000000'
-    primaryBorderColor: '#159957'
-    lineColor: '#000000'
-    secondaryColor: '#006100'
-    tertiaryColor: '#fff'
----
-
 erDiagram 
     direction LR
     countries||--o{cities : ""
