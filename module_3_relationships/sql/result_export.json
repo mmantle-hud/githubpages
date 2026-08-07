@@ -1,0 +1,14 @@
+[
+  {
+    "employee": "Sara Jones",
+    "manager": "Kwame Mensah"
+  },
+  {
+    "employee": "Usman Hussain",
+    "manager": "Kwame Mensah"
+  },
+  {
+    "employee": "Tom Smith",
+    "manager": "Sara Jones"
+  }
+]

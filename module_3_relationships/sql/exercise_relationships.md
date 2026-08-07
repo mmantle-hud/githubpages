@@ -1,0 +1,18 @@
+# Quiz
+
+Consider the following scenarios. What is the relationship (1:M, M:M, 1:1) between the entities in each of the following relationships:
+
+- Photographer _shoots_ photograph
+    - This is a **one-to-many** relationship. A photographer can shoot many photographs, but a photograph is taken by one photographer. 
+- Car manufacturer (e.g. Toyota) _makes_ car model (e.g. Corolla)
+    - This is a **one-to-many** relationship. A car manufacturer e.g. Toyota makes many different car models e.g. Corolla, RAV4, Hilux. A car make is made by one manufacturer. 
+- Superhero (e.g. Superman) _has_ super power (e.g. flight)
+    - This is a **many-to-many** relationship. A superhero e.g. Superman has many powers: flight, super strength etc. A single super power e.g. flight is a power of many superheros: Superman, Iron Man, Storm etc. 
+- Person _speaks_ language
+    - This is a **many-to-many** relationship. A person can speak many different languages. A language can be spoken by many different people. 
+- Patient _prescribed_ drug
+    - This is a **many-to-many** relationship. A patient can be prescribed many different drugs. A drug can be prescribed to many different patients. 
+- Stadium _home ground of_ football club
+    - This one might depend on your knowledge of football and assumptions we make. Assuming we only want to keep track of a club's current ground, the majority of football clubs have a single home stadium and this stadium is the home stadium of a single club e.g. Old Trafford is the home stadium of Manchester United. This is a one-to-one relationship. However, there are several clubs that share a home stadium e.g. Inter Milan and AC Milan both play their home games at the San Siro stadium. Modelling this more flexibly gives us a **one-to-many** relationship between stadium and football club.
+- Director _directs_ movie
+    - Initially we might model this as a one-to-many relationship. A director directs many movies. A movie is directed by one director. Again, there are exceptions. For example the Wachowski sisters that directed The Matrix, or Anthony and Joe Russo that directed many of the Marvel films. Therefore, to accommodate multiple directors, this is best modelled as a **many-to-many** relationship. 

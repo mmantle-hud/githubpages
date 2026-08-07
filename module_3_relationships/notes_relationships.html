@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>notes_relationships.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="relationships">Relationships</h1>
+<!-- Last week we said that tables represent entities, things from the real world that we are want to store data about. So we had a students table to store data about students, a movies table to store data about movies.  -->
+<!-- We kept things simple, each database had a single table.  -->
+<p>So far in the course we have worked with singe table databases. In anything other than really simple applications we are going to need more than a single table.</p>
+<p>Imagine we are building a web application that will act as a travel guide for people wanting to go on a city break. They are going to use the website to help them choose which city to visit.</p>
+<!-- Common nouns -->
+<p>We'll need to store data about the different cities such as the name of the city, and it's average temperature. We might also want to store data about different countries where cities are located. For example, the name of the country and the currency used.</p>
+<p>So I have two entities <em>cities</em> and <em>countries</em>.</p>
+<p>We can show this visually on an ERD, an entity relationship diagram.</p>
+<pre><code class="language-mermaid"><div class="mermaid">classDiagram 
+    class Country{
+      name
+      population
+      currency
+    }
+    class City{
+        name 
+        is capital
+        average temperature
+    }
+</div></code></pre>
+<p>We show entities in boxes, with the name of the entity at the top, and then we display the attributes below.</p>
+<p>There is a relationship between these entities. A city is <em>located in</em> a country.</p>
+<p>We can also this relationship visually on the diagram.</p>
+<pre><code class="language-mermaid"><div class="mermaid">classDiagram 
+    accTitle: Conceptual ERD showing Country and City
+    accDescr: Shows the Country and City entities
+    City --> Country : located in
+    class Country{
+      name
+      population
+      currency
+    }
+    class City{
+        name
+        is capital
+        average temperature
+    }
+</div></code></pre>
+<p>The arrow show the direction of the relationship and the label describes the relationship. So this states cities are located in countries.</p>
+<p>We use verbs to describe relationships. For example a customer <em>orders</em> a product, a footballer <em>scores</em> a goal.</p>
+<h2 id="cardinality">Cardinality</h2>
+<p>Another key thing about relationships is they have cardinality. What does this mean? It means how many of one thing can be related to the other.</p>
+<p>Thinking about my travel guide example we need to ask the question</p>
+<p><em>A city is located in how many countries?</em></p>
+<p>The answer is <strong>one</strong> e.g. London is located in England, Paris is located in France, Delhi is located in India etc.</p>
+<p>We also need to think about the relationship in the other direction</p>
+<p><em>A country contains how many cities?</em></p>
+<p>The answer is <strong>many</strong> e.g. England contains London, Manchester, Leeds etc. France contains Paris, Lyon, Marseille etc. India contains Mumbai, Dehli, Hyderabad and so on.</p>
+<p>We say there is a <strong>one-to-many</strong> relationship between Country and City.  One country can contain many cities, but a city is located in a single country. We write this as 1:M or 1:N.</p>
+<p>There are lots of 1:M relationships between entities. For example league and football team. A league has many teams, but a team plays in a single league.</p>
+<!-- Car make and model
+Phone brand and phone Apple-iphone 12, iphone x iphone se, Samsung galaxy,...footballer and goal -->
+<p>How do relationships relate to databases?</p>
+<p>We want to store data about relationships as part of our database. In the travel guide example we want to record which country a city is located in.</p>
+<p><strong>countries</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">country_id</th>
+<th style="text-align:left">country_name</th>
+<th style="text-align:left">total_population</th>
+<th style="text-align:left">currency_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Germany</td>
+<td style="text-align:left">84000000</td>
+<td style="text-align:left">EUR</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Spain</td>
+<td style="text-align:left">48000000</td>
+<td style="text-align:left">EUR</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Japan</td>
+<td style="text-align:left">125000000</td>
+<td style="text-align:left">JPY</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Canada</td>
+<td style="text-align:left">40000000</td>
+<td style="text-align:left">CAD</td>
+</tr>
+</tbody>
+</table>
+<p><strong>cities</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">city_id</th>
+<th style="text-align:left">city_name</th>
+<th style="text-align:left">is_capital</th>
+<th style="text-align:left">avg_temp_celsius</th>
+<th style="text-align:left">country_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Berlin</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">10.5</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Munich</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">9.0</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Hamburg</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">9.7</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Madrid</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">15.0</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">Barcelona</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">18.2</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">Tokyo</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">16.5</td>
+<td style="text-align:left">3</td>
+</tr>
+</tbody>
+</table>
+<p>In the <em>cities</em> table we show which country the city is located in by using the country's primary key value. We can see that Barcelona is in the country with the <em>country_id</em> of 2, it's in Spain.</p>
+<p>We call this a <strong>foreign key</strong>.</p>
+<p><em>A foreign key is a column in a database table that points to the primary key of another table</em>.</p>
+<p>We can also see that a single country e.g. Germany appears in the cities table many times.</p>
+<p>We call the table on the <strong>one</strong> side of the relationship (in this example countries) the parent table, and we call the table on the <strong>many</strong> side of the relationship (cities) the child table.</p>
+<p>How do we implement this?</p>
+<p>The <code>CREATE</code> statement for countries is straightforward.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">CREATE TABLE</span> countries (
+country_id <span class="hljs-type">INT</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span>,
+country_name TEXT <span class="hljs-keyword">NOT NULL</span>,
+total_population <span class="hljs-type">BIGINT</span> <span class="hljs-keyword">NOT NULL</span>,
+currency_code <span class="hljs-type">CHAR</span>(<span class="hljs-number">3</span>) <span class="hljs-keyword">NOT NULL</span>,
+<span class="hljs-keyword">CONSTRAINT</span> pk_countries <span class="hljs-keyword">PRIMARY KEY</span> (country_id)
+);
+</div></code></pre>
+<p><code>CHAR</code> is used for a fixed length string. Currency codes are always three letters in length.</p>
+<p>The SQL for creating the cities tables:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">CREATE TABLE</span> cities (
+  city_id <span class="hljs-type">INT</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span>,
+  city_name TEXT <span class="hljs-keyword">NOT NULL</span>,
+  is_capital <span class="hljs-type">BOOLEAN</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">false</span>,
+  avg_temp_celsius <span class="hljs-type">NUMERIC</span>(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>) <span class="hljs-keyword">NOT NULL</span>,
+  country_id <span class="hljs-type">INT</span> <span class="hljs-keyword">NOT NULL</span>,
+  <span class="hljs-keyword">CONSTRAINT</span> pk_cities <span class="hljs-keyword">PRIMARY KEY</span> (city_id),
+  <span class="hljs-keyword">CONSTRAINT</span> fk_cities_countries <span class="hljs-keyword">FOREIGN KEY</span> (country_id) <span class="hljs-keyword">REFERENCES</span> countries (country_id)
+);
+</div></code></pre>
+<p>There are a couple of new data types we haven't seen before that are worth discussing. <em>is_capital</em> will store BOOLEAN value i.e. TRUE or FALSE. The DEFAULT keyword simply states if an INSERT statement doesn't specify a value PostgreSQL will use FALSE as a default. <em>avg_temp_celsius</em> uses the NUMERIC data type for fixed point numbers. The first argument, 3 specifies the total number of digits, the second argument, 1, specifies how many digits are allowed to the left of the decimal point, so this column will allow numbers such as 23.5, 12, -3.2, we use a single decimal place.</p>
+<p>The important thing to focus on is the foreign key column, <em>country_id</em>. We declare <em>country_id</em> as a column, making sure we match the data type of the parent table.</p>
+<p>We also add a constraint that states this is a foreign key. The constraint is given a name <em>fk_cities_countries</em>, specifies the foreign key column <code>FOREIGN KEY (country_id)</code>, and the table and column it links to <code>REFERENCES countries (country_id)</code></p>
+<p>Again, the naming is important. Try and use a consistent clear naming for the constraint e.g.<em>fk_child_table_parent_table</em>.</p>
+<!-- `ON DELETE CASCADE` means if a row in the parent table is deleted any linked row in the child table is also deleted. We don't always use a cascading delete. In this situation it makes sense. A city can't exist unless it is part of a country. -->
+<!-- However, we don't always used DELETE CASCADE. For example we might have a banking app where there is a 1:M relationship between customer and transaction.  -->
+<!-- Even if the customer closes their account we probably still want to keep a record of their transactions.  -->
+<h2 id="erd">ERD</h2>
+<p>I can show this 1:M relationship on an ERD</p>
+<pre><code class="language-mermaid"><div class="mermaid">erDiagram 
+    direction LR
+    countries||--o{cities : ""
+
+    cities{
+        INT city_id PK
+        VARCHAR(255) city_name 
+        BOOLEAN is_capital "DEFAULT false"
+        NUMERIC avg_temp
+        INT country_id FK
+    }
+    countries{
+        INT country_id PK
+        VARCHAR(255) country_name
+        BIGINT population
+        CHAR(3) currency_code
+    }
+</div></code></pre>
+<p>The relationship line has symbols at each end. The 'crow's foot', where it splits into three as it joins the cities table, indicates many.</p>
+<p>The short line (|) that crosses the relationship line next to the countries table indicates one.</p>
+<p>This ERD also shows the data types and column names of the final database design.</p>
+<h2 id="optionality">Optionality</h2>
+<p>The diagram also show optionality. Optionality specifies if a relationship is optional or mandatory.</p>
+<p>Next to the crow's foot there is an inner symbol, a circle. This indicates the relationship is optional for countries. A country can exist in the database without having any associated cities. For example, Canada is in the countries table, but no Canadian cities have been added yet.</p>
+<p>The inner symbol on the countries side, also a short line (|) indicates this relationship is mandatory. A city must be associated with a country. We can't add a city unless we specify the country it is located in.</p>
+<h2 id="inserting-data-in-a-1m-relationship">Inserting data in a 1:M relationship.</h2>
+<p>We have to add records to the countries tables first. If we don't, there won't be any foreign key values to use in the cities table and PostgreSQL will throw an error.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">INSERT INTO</span> countries (country_name, total_population, currency_code) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-string">&#x27;Germany&#x27;</span>, <span class="hljs-number">84000000</span>, <span class="hljs-string">&#x27;EUR&#x27;</span>),
+(<span class="hljs-string">&#x27;Spain&#x27;</span>, <span class="hljs-number">48000000</span>, <span class="hljs-string">&#x27;EUR&#x27;</span>),
+(<span class="hljs-string">&#x27;Japan&#x27;</span>, <span class="hljs-number">125000000</span>, <span class="hljs-string">&#x27;JPY&#x27;</span>),
+(<span class="hljs-string">&#x27;Canada&#x27;</span>, <span class="hljs-number">40000000</span>, <span class="hljs-string">&#x27;CAD&#x27;</span>);
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-keyword">INSERT INTO</span> cities (city_name, is_capital, avg_temp_celsius, country_id) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-string">&#x27;Berlin&#x27;</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">10.5</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-string">&#x27;Munich&#x27;</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">9.0</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-string">&#x27;Hamburg&#x27;</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">9.7</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-string">&#x27;Madrid&#x27;</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">15.0</span>, <span class="hljs-number">2</span>),
+(<span class="hljs-string">&#x27;Barcelona&#x27;</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">18.2</span>, <span class="hljs-number">2</span>),
+(<span class="hljs-string">&#x27;Tokyo&#x27;</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">16.5</span>, <span class="hljs-number">1</span>);
+</div></code></pre>
+<h2 id="referential-integrity">Referential Integrity</h2>
+<ul>
+<li>Foreign keys enforce <strong>referential integrity</strong>. This means when we set up a foreign key two constraints are created:</li>
+</ul>
+<ol>
+<li>Child tables can only use ids from the parent table.</li>
+<li>Can't delete rows from the parent table if they are being used by the child table.</li>
+</ol>
+<h2 id="joins">Joins</h2>
+<p>Querying tables in a 1:M relationship involves using a join. JOIN is a command to combine rows from two tables based on a shared column.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+cities.city_name, countries.country_name 
+<span class="hljs-keyword">FROM</span> cities
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> countries <span class="hljs-keyword">ON</span> cities.country_id <span class="hljs-operator">=</span> countries.country_id;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">city_name</th>
+<th style="text-align:left">country_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Berlin</td>
+<td style="text-align:left">Germany</td>
+</tr>
+<tr>
+<td style="text-align:left">Munich</td>
+<td style="text-align:left">Germany</td>
+</tr>
+<tr>
+<td style="text-align:left">Hamburg</td>
+<td style="text-align:left">Germany</td>
+</tr>
+<tr>
+<td style="text-align:left">Madrid</td>
+<td style="text-align:left">Spain</td>
+</tr>
+<tr>
+<td style="text-align:left">Barcelona</td>
+<td style="text-align:left">Spain</td>
+</tr>
+<tr>
+<td style="text-align:left">Tokyo</td>
+<td style="text-align:left">Germany</td>
+</tr>
+</tbody>
+</table>
+<p>See how the results show a column from the cities table and a column from the countries table. Specifically this is an INNER JOIN. For each city, we look for the matching <em>country_id</em> in the countries table and display the country's name. When specifying the columns we want to retrieve, we prefix the column name with the table name to make it clear which column we want to retrieve.</p>
+<!-- There are other types of join. We will look at some of these later in the course. 
+
+
+The order in which we select the tables doesn't matter, I could start with countries instead.  -->
+<h2 id="filtering-and-grouping-using-a-join">Filtering and Grouping using a Join</h2>
+<p>Last week we learnt about sorting, filtering and grouping. These ideas still apply when joining tables e.g. using WHERE</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+cities.city_name, countries.country_name, cities.avg_temp_celsius
+<span class="hljs-keyword">FROM</span> cities
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> countries <span class="hljs-keyword">ON</span> cities.country_id <span class="hljs-operator">=</span> countries.country_id
+<span class="hljs-keyword">WHERE</span> cities.avg_temp_celsius <span class="hljs-operator">&gt;</span> <span class="hljs-number">10</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> avg_temp_celsius <span class="hljs-keyword">DESC</span>;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">city_name</th>
+<th style="text-align:left">country_name</th>
+<th style="text-align:left">avg_temp_celsius</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Barcelona</td>
+<td style="text-align:left">Spain</td>
+<td style="text-align:left">18.2</td>
+</tr>
+<tr>
+<td style="text-align:left">Tokyo</td>
+<td style="text-align:left">Germany</td>
+<td style="text-align:left">16.5</td>
+</tr>
+<tr>
+<td style="text-align:left">Madrid</td>
+<td style="text-align:left">Spain</td>
+<td style="text-align:left">15.0</td>
+</tr>
+<tr>
+<td style="text-align:left">Berlin</td>
+<td style="text-align:left">Germany</td>
+<td style="text-align:left">10.5</td>
+</tr>
+</tbody>
+</table>
+<p>Or using a GROUP BY</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+countries.country_name, <span class="hljs-built_in">COUNT</span>(cities.city_name) <span class="hljs-keyword">AS</span> num_of_cities
+<span class="hljs-keyword">FROM</span> countries
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> cities <span class="hljs-keyword">ON</span> countries.country_id <span class="hljs-operator">=</span> cities.country_id
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> countries.country_name;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">country_name</th>
+<th style="text-align:left">num_of_cities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Spain</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">Germany</td>
+<td style="text-align:left">4</td>
+</tr>
+</tbody>
+</table>
+<p>Note that Canada isn't included in the results. With INNER JOIN we only join where there is a match between the parent row and child rows. To display Canada and 0, we'd use a LEFT JOIN which we'll learn about in the coming weeks.</p>
+<h2 id="exercise-questions-about">Exercise questions about</h2>
+<p>1:M language and the movies example</p>
+<h2 id="many-to-many-relationships">Many-to-Many relationships</h2>
+<p>The other key relationship we need to be aware of is a many-to-many relationship.</p>
+<p>Imagine a music school. a conservatory. wants to keep track of it's students and the musical instruments they play.</p>
+<p>Again I could show this visually</p>
+<pre><code class="language-mermaid"><div class="mermaid">classDiagram 
+   Musician --> Instrument : plays
+   class Musician{
+     given name
+     family name
+   }
+   class Instrument{
+     instrument name
+   }
+</div></code></pre>
+<p>Now lets think about the cardinality</p>
+<p>A musician can play how many instruments?</p>
+<p>The answer is <strong>many</strong> e.g. If we think of a musician such as Prince. he could play guitar, keyboards, drums, bass etc.</p>
+<p>And in the other direction</p>
+<p>The answer is also <strong>many</strong> e.g.</p>
+<p>An instrument can be played by how many musicians? For example, lots of musicians can play piano - Nina Simone, Stevie Wonder, Paul McCartney etc.</p>
+<p>We say there is a many-to-many relationship between Musician and Instrument.</p>
+<p>A musician can play many instruments, and an instrument can be played by many musicians.</p>
+<p>The important thing here is we are talking about types of instrument - piano, violin, guitar etc. Not specific individual instances.</p>
+<p>We write this as M:M or M:N.</p>
+<p>Again many-to-many relationships are very common.</p>
+<p>For example, in an ecommerce application</p>
+<p>An order is made up of many products.
+A product can be part of many orders.</p>
+<p>A students studies in many courses
+A course is studied by many students</p>
+<h2 id="implementation-in-a-database">Implementation in a database</h2>
+<p>How do we implement a many-to-many relationship in a database?</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">musician_id</th>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Elena</td>
+<td style="text-align:left">Rostova</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Chloe</td>
+<td style="text-align:left">Tanaka</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ali</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">instrument_id</th>
+<th style="text-align:left">instrument_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Violin</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Drums</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Flute</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Keyboard</td>
+</tr>
+</tbody>
+</table>
+<p>There isn't a parent child relationship so we can't simply add a foreign key column.</p>
+<p>You might be tempted to add a foreign key column to store multiple id numbers</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">musician_id</th>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+<th style="text-align:left">instrument_ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Elena</td>
+<td style="text-align:left">Rostova</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">2, 4</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Chloe</td>
+<td style="text-align:left">Tanaka</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ali</td>
+<td style="text-align:left">1, 2, 4</td>
+</tr>
+</tbody>
+</table>
+<p>But this is a really bad idea, each field should store a single value, and we can't enforce referential integrity using this approach.</p>
+<p>Instead, what we do is add an additional table. Each row in this table will store the id number of a musician and an instrument.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">musician_id</th>
+<th style="text-align:left">instrument_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">4</td>
+</tr>
+</tbody>
+</table>
+<p>So there are two foreign key columns <em>musician_id</em> and <em>instrument_id</em>.</p>
+<p>In this way we can link a musician to multiple instruments, and an instrument to multiple musicians.</p>
+<p>So we can see that Marcus Vance plays Drums and Flutes.</p>
+<p>We can also see that the Violin is played by Elena Rostova and Zubair Ali.</p>
+<p>We call this table a bridging table, junction table, or a linking table.</p>
+<p>The naming convention is to call it <em>table1_table2</em> but use singular terms i.e. <em>instrument_musician</em>.</p>
+<p>What is the primary key for this table?</p>
+<p>This table uses a composite primary key, a combination of two columns, <em>musician_id</em> and <em>instrument_id</em>.</p>
+<p>Although the same <em>musician_id</em> appears across multiple rows, and the same <em>instrument_id</em> appears across multiple rows. The combination of the two is unique. For example, there can only be one row with the 2,1 combination.</p>
+<h2 id="create-sql">CREATE SQL</h2>
+<p>How do we create the junction table and set up the keys correctly?</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">CREATE TABLE</span> musicians(
+    musician_id <span class="hljs-type">INT</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span>,
+    given_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT NULL</span>,
+    family_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NULL</span>,
+    <span class="hljs-keyword">CONSTRAINT</span> pk_musicians <span class="hljs-keyword">PRIMARY KEY</span> (musician_id)
+);
+<span class="hljs-keyword">CREATE TABLE</span> instruments(
+    instrument_id <span class="hljs-type">INT</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span>,
+    instrument_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT NULL</span>,
+    <span class="hljs-keyword">CONSTRAINT</span> pk_instruments <span class="hljs-keyword">PRIMARY KEY</span> (instrument_id)
+);
+<span class="hljs-keyword">CREATE TABLE</span> musician_instrument(
+    musician_id <span class="hljs-type">INT</span>,
+    instrument_id <span class="hljs-type">INT</span>,
+    <span class="hljs-keyword">CONSTRAINT</span> pk_musician_instrument <span class="hljs-keyword">PRIMARY KEY</span> (musician_id,instrument_id),
+    <span class="hljs-keyword">CONSTRAINT</span> fk_musician_instrument_musicians <span class="hljs-keyword">FOREIGN KEY</span> (musician_id) <span class="hljs-keyword">REFERENCES</span> musicians(musician_id) <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DELETE</span> CASCADE,
+    <span class="hljs-keyword">CONSTRAINT</span> fk_musician_instrument_instruments <span class="hljs-keyword">FOREIGN KEY</span> (instrument_id) <span class="hljs-keyword">REFERENCES</span> instruments(instrument_id) <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DELETE</span> CASCADE
+);
+</div></code></pre>
+<p>The musicians and instruments tables don't show anything new.</p>
+<p>The junction table has a composite primary key, so we list both columns under PRIMARY KEY.
+Both these columns are also foreign keys. We need a constraint for each.</p>
+<p>Again we use ON DELETE CASCADE. If we remove a musician or instrument form the database, the associated records should be deleted.</p>
+<h2 id="erd-1">ERD</h2>
+<p>Again we can show this on an ERD</p>
+<pre><code class="language-mermaid"><div class="mermaid">erDiagram 
+    direction LR
+    musicians||--o{musician_instrument : ""
+    instruments||--o{musician_instrument : ""
+
+    musicians{
+        INT musician_id PK
+        VARCHAR(255) given_name 
+        VARCHAR(255) family_name
+    }
+    musician_instrument{
+        INT musician_id PK, FK
+        INT instrument_id PK, FK
+    }
+    instruments{
+        INT instrument_id PK
+        VARCHAR(255) instrument_name
+    }
+</div></code></pre>
+<p>We use the crow's foot on the many side of the relationship.</p>
+<h2 id="querying-a-junction-table">Querying a junction table</h2>
+<p>We'll break this one down into steps</p>
+<p>To start with I'll show joining the musicians table to the musician_instrument table</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+    musicians.given_name, 
+    musicians.family_name,
+    musician_instrument.instrument_id
+<span class="hljs-keyword">FROM</span> musicians 
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> musician_instrument <span class="hljs-keyword">ON</span> musicians.musician_id <span class="hljs-operator">=</span> musician_instrument.musician_id;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+<th style="text-align:left">instrument_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Elena</td>
+<td style="text-align:left">Rostova</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left">Chloe</td>
+<td style="text-align:left">Tanaka</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">4</td>
+</tr>
+</tbody>
+</table>
+<p>We can then extend this to join all three tables:-</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+    musicians.given_name, 
+    musicians.family_name,
+    instruments.instrument_name
+<span class="hljs-keyword">FROM</span> musicians 
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> musician_instrument <span class="hljs-keyword">ON</span> musicians.musician_id <span class="hljs-operator">=</span> musician_instrument.musician_id
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> instruments <span class="hljs-keyword">ON</span> musician_instrument.instrument_id<span class="hljs-operator">=</span> instruments.instrument_id;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+<th style="text-align:left">instrument_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+<td style="text-align:left">Violin</td>
+</tr>
+<tr>
+<td style="text-align:left">Elena</td>
+<td style="text-align:left">Rostova</td>
+<td style="text-align:left">Drums</td>
+</tr>
+<tr>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">Flute</td>
+</tr>
+<tr>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">Keyboard</td>
+</tr>
+<tr>
+<td style="text-align:left">Chloe</td>
+<td style="text-align:left">Tanaka</td>
+<td style="text-align:left">Keyboard</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">Violin</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">Drums</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">Keyboard</td>
+</tr>
+</tbody>
+</table>
+<p>This is the point at which people sometimes start to get confused. As we join more tables, things can get confusing.</p>
+<p>My advice is to try and break down the join so you can see what each part of it is doing.</p>
+<p>Maybe use the asterix (*)</p>
+<h2 id="using-aliases">Using Aliases</h2>
+<p>As our joins get more complex it is common practice to use table aliases e.g.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+    m.given_name, 
+    m.family_name,
+    i.instrument_name
+<span class="hljs-keyword">FROM</span> musicians <span class="hljs-keyword">AS</span> m
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> musician_instrument <span class="hljs-keyword">AS</span> mi <span class="hljs-keyword">ON</span> m.musician_id <span class="hljs-operator">=</span> mi.musician_id
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> instruments <span class="hljs-keyword">as</span> i <span class="hljs-keyword">ON</span> mi.instrument_id<span class="hljs-operator">=</span> i.instrument_id;
+</div></code></pre>
+<p>If we have very large databases with lots of tables that start with the same letter we might use the first few letter e.g. mus, ins.</p>
+<h2 id="filtering-and-grouping">Filtering and Grouping</h2>
+<p>Again we can use filtering and grouping. For example to find the names of all the musicians that play the violin.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+    m.given_name, 
+    m.family_name,
+    i.instrument_name
+<span class="hljs-keyword">FROM</span> musicians <span class="hljs-keyword">AS</span> m
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> musician_instrument <span class="hljs-keyword">AS</span> mi <span class="hljs-keyword">ON</span> m.musician_id <span class="hljs-operator">=</span> mi.musician_id
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> instruments <span class="hljs-keyword">as</span> i <span class="hljs-keyword">ON</span> mi.instrument_id<span class="hljs-operator">=</span> i.instrument_id
+<span class="hljs-keyword">WHERE</span> i.instrument_name<span class="hljs-operator">=</span><span class="hljs-string">&#x27;Violin&#x27;</span>;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+<th style="text-align:left">instrument_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+<td style="text-align:left">Violin</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">Violin</td>
+</tr>
+</tbody>
+</table>
+<p>We can use GROUP BY e.g. to get how many people play each instrument:-</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+    m.given_name, 
+    m.family_name,
+    <span class="hljs-built_in">COUNT</span>(mi.instrument_id) <span class="hljs-keyword">AS</span> num_instruments
+<span class="hljs-keyword">FROM</span> musicians <span class="hljs-keyword">AS</span> m
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> musician_instrument <span class="hljs-keyword">AS</span> mi <span class="hljs-keyword">ON</span> m.musician_id <span class="hljs-operator">=</span> mi.musician_id
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> m.given_name, m.family_name;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+<th style="text-align:left">num_instruments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">Elena</td>
+<td style="text-align:left">Rostova</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Chloe</td>
+<td style="text-align:left">Tanaka</td>
+<td style="text-align:left">1</td>
+</tr>
+</tbody>
+</table>
+<p>Note, that we only need to join to the junction table, we don't need any data from the instruments table.</p>
+<p>A final query uses string aggregation to output the instruments in a single row.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> 
+    m.given_name, 
+    m.family_name, 
+    STRING_AGG(i.instrument_name, <span class="hljs-string">&#x27;, &#x27;</span>) <span class="hljs-keyword">AS</span> instruments
+<span class="hljs-keyword">FROM</span> musicians m
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> musician_instrument mi <span class="hljs-keyword">ON</span> m.musician_id <span class="hljs-operator">=</span> mi.musician_id
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> instruments i <span class="hljs-keyword">ON</span> mi.instrument_id <span class="hljs-operator">=</span> i.instrument_id
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> m.musician_id, m.given_name, m.family_name;
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">given_name</th>
+<th style="text-align:left">family_name</th>
+<th style="text-align:left">instruments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Chloe</td>
+<td style="text-align:left">Tanaka</td>
+<td style="text-align:left">Keyboard</td>
+</tr>
+<tr>
+<td style="text-align:left">Elena</td>
+<td style="text-align:left">Rostova</td>
+<td style="text-align:left">Drums</td>
+</tr>
+<tr>
+<td style="text-align:left">Marcus</td>
+<td style="text-align:left">Vance</td>
+<td style="text-align:left">Flute, Keyboard</td>
+</tr>
+<tr>
+<td style="text-align:left">Alex</td>
+<td style="text-align:left">Mercer</td>
+<td style="text-align:left">Violin</td>
+</tr>
+<tr>
+<td style="text-align:left">Zubair</td>
+<td style="text-align:left">Ullah</td>
+<td style="text-align:left">Violin, Drums, Keyboard</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multiple-foreign-keys">Multiple Foreign keys</h2>
+<h2 id="one-to-one-relationships">One-to-one relationships</h2>
+<h2 id="self-relationships">Self relationships</h2>
+<p>person and passport/driving license
+companies and vehicles</p>
+<h2 id="exercises">Exercises</h2>
+<p>What is the relationship
+1:M
+Photographer 'shoots' - photograph
+1:M
+Car manufacturer 'makes' car model
+M:M
+Superhero 'has' Power
+Person - speaks - Language
+Patient - prescribed - drug</p>
+<p>1:1
+Football Club - 'plays home games at' - stadium
+Person - holds - passport</p>
+<p>M:M
+Director - 'directs' - Movie</p>
+<p>Can you suggest some interesting M:M relationships. So far I have:-
+Superhero 'has' Power
+Person 'speaks' Language
+Patient 'prescribed' drug</p>
+<p>Relationships</p>
+<p>Cardinality and Optionality</p>
+<p>Many-to-many joins</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">CREATE TABLE</span> cities (
+city_id <span class="hljs-type">INT</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span>,
+city_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT NULL</span>,
+is_capital <span class="hljs-type">BOOLEAN</span> <span class="hljs-keyword">NOT NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">FALSE</span>,
+avg_temp_celsius <span class="hljs-type">NUMERIC</span>(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>) <span class="hljs-keyword">NOT NULL</span>,
+<span class="hljs-keyword">CONSTRAINT</span> pk_cities <span class="hljs-keyword">PRIMARY KEY</span> (city_id),
+);
+</div></code></pre>
+<p>We looked at similar CREATE statements last week. There are a couple of new data types we haven't seen before that are worth discussing. <em>is_capital</em> will store BOOLEAN value i.e. TRUE or FALSE. The DEFAULT keyword simply states if an INSERT statement doesn't specify a value we will use FALSE as a default.</p>
+<p><em>avg_temp_celsius</em> uses the NUMERIC data type for fixed point numbers. The first argument, 3 specifies the total number of digits, the second argument (1) specifies how many digits to the lect of the decimal point, so a single digit. This column will allow numbers such as 23.5, 12, -3.2.</p>
+<p>I could query this table e.g.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">SELECT</span> city_name <span class="hljs-keyword">FROM</span> cities
+<span class="hljs-keyword">WHERE</span> is_capital <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span> <span class="hljs-keyword">AND</span> mean_temp_celcius <span class="hljs-operator">&gt;=</span> <span class="hljs-number">25</span>;
+</div></code></pre>
+<p>I might also want to</p>
+<p>Here are two entities</p>
+<p>country and city</p>
+<p>There is a relationship between the two:-</p>
+<p>A country contains many cities</p>
+<p>A city is located in a country</p>
+<p>We say there is a One-to-Many relationship between Country and City (1:N)</p>
+<ul>
+<li>
+<p>Use the term parent-child</p>
+</li>
+<li>
+<p>It is considered sntadard practice to use aliases students As s, assessments as a etc.</p>
+</li>
+<li>
+<p>Do I need Joins for insert/delete statements</p>
+</li>
+<li>
+<p>The teams example, joining three tables, it also brings in table liases</p>
+</li>
+<li>
+<p>Do multi-column group by</p>
+</li>
+<li>
+<p>Using AND in an ON clause
+SELECT s.given_name, m.mark
+FROM students s
+LEFT JOIN marks m
+ON s.student_id = m.student_id
+AND m.mark &gt; 70; -- Only pull through 'First Class' marks!</p>
+</li>
+<li>
+<p>Best practice for aliases, use AS for columns, omit for tables e.g.</p>
+</li>
+</ul>
+<p>SELECT given_name AS name FROM students s
+INNER JOIN courses c ON s.course_id=c.course_id;</p>
+<p>I then want to move on to to explore the idea of relationships. Does this seem like a good start:-</p>
+<p>Last week we said that tables represent entities, things from the real world.</p>
+<p>Well in the real world entities have relationships.</p>
+<p>Here's an example to show what I mean:-</p>
+<p>Here are two entities</p>
+<p>country and city</p>
+<p>There is a relationship between the two:-</p>
+<p>A country contains many cities</p>
+<p>A city is located in a country</p>
+<p>We say there is a One-to-Many relationship between Country and City (1:N)</p>
+<p>CREATE TABLE countries (
+country_id INT GENERATED ALWAYS AS IDENTITY,
+country_name TEXT NOT NULL,
+total_population BIGINT,
+currency_code CHAR(3),
+CONSTRAINT pk_countries PRIMARY KEY (country_id)
+);</p>
+<p>CREATE TABLE cities (
+city_id INT GENERATED ALWAYS AS IDENTITY,
+city_name TEXT NOT NULL,
+country_id INT NOT NULL,
+is_capital BOOLEAN DEFAULT false,
+mean_temp_celsius NUMERIC(3, 1),
+CONSTRAINT pk_cities PRIMARY KEY (city_id),
+CONSTRAINT fk_cities_countries
+FOREIGN KEY (country_id) REFERENCES countries (country_id)
+);</p>
+<ul>
+<li>
+<p>FKs enforce Referential integrity</p>
+<ul>
+<li>Two constraints
+<ul>
+<li>Child tables can only use ids from the parent table</li>
+<li>Can't delete rows form the parent table if they are being used by the child</li>
+</ul>
+</li>
+<li>Probably worth demonstrating this</li>
+</ul>
+</li>
+<li>
+<p>You should use ON DELETE CASCADE when the child data cannot logically exist without its parent. If the parent dies, the child data becomes completely useless &quot;junk data.&quot; e.g. junction tables.</p>
+</li>
+<li>
+<p>Many-to-many</p>
+</li>
+<li>
+<p>one-to-one</p>
+<ul>
+<li>keep it brief</li>
+</ul>
+</li>
+<li>
+<p>I think I have to add in optionality</p>
+</li>
+</ul>
+<p>I also have to get in ERDs and how we construct them.</p>
+<ul>
+<li>Theory questions I can do
+<ul>
+<li>movies-certificates, movie-genre</li>
+<li>student-course</li>
+<li>ask AI for some others</li>
+</ul>
+</li>
+<li>I can use students or movies for the practical questions</li>
+</ul>
+<p>patient drug</p>
+<h2 id="language-codes">Language Codes</h2>
+<p>Using a surrogate key (like an auto-incrementing id) is a common industry standard, but for a global language table, the standard ISO language code (en, ja, fr) is actually the superior and more realistic choice.Here is why using a natural key like an ISO code makes more sense than a surrogate key in this specific scenario:1. It is a Globally Recognized Natural KeyA surrogate key is used when the natural data is messy, prone to typos, or changes over time (like human names or addresses).However, ISO 639-1 language codes are a rigid, unchanging international standard.en will always mean English.ja will always mean Japanese.These codes will never change or need updating, completely eliminating the risk of update anomalies.2. Cleaner, More Readable Foreign KeysIf you use a surrogate key, your movies table will look like this:movie_idtitlelanguage_id (FK)1Toy Story3A developer or student looking at this raw table has no idea what language 3 is without constantly writing an explicit JOIN statement.If you use the ISO code, the table remains incredibly clear and scannable, even without joining the parent table:movie_idtitlelanguage_code (FK)1Toy Storyen3. Better Query PerformanceBecause en or ja is already stored directly inside the movies table row, developers can filter movies by language (WHERE language_code = 'ja') instantly. The database does not need to perform a costly join operation to a lookup table just to check a basic 2-letter abbreviation.The Teaching Angle: A Perfect &quot;Natural vs. Surrogate&quot; LessonUsing the ISO code gives you a fantastic opportunity to teach your students that surrogate keys are not a silver bullet.You can explain to them that while surrogate keys are perfect for tracking changing business entities (like Employees, Camps, or Assignments), stable, international standards (like language codes, country codes like GB/US, or currency codes like GBP/USD) should be left as natural primary keys.</p>
+
+</body>
+</html>
