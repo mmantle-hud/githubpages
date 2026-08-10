@@ -5,12 +5,12 @@
         - 1.0.3_additional_support_resources (standard text)
         - [1.0.4_meet_the_teaching_team](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.0_Introduction/1.0.4_meet_the_teaching_team)
     - 1.1 Introduction to Relational Databases
-        - [1.1.1_reading_introduction_to_relational_databases](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.1_introduction_to_relational_databases/1.1.1_introduction_to_relational_databases)
-        - [1.1.2_reading_basic_relational_database_concepts](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.1_introduction_to_relational_databases/1.1.2_basic_relational_database_concepts)
+        - [1.1.1_reading_introduction_to_relational_databases](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.1_introduction_to_relational_databases/1.1.1_reading_introduction_to_relational_databases)
+        - [1.1.2_reading_basic_relational_database_concepts](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.1_introduction_to_relational_databases/1.1.2_reading_basic_relational_database_concepts)
         - 1.1.3_quiz_relational_database_concepts (TODO)
     - 1.2 Introduction to SQL
         - [1.2.1_reading_introduction_to_sql](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.1_reading_introduction_to_sql)
-        - [1.2.2_reading_insert_update_delete_and_select](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.2_insert_update_delete_and_select)
+        - [1.2.2_reading_insert_update_delete_and_select](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.2_reading_insert_update_delete_and_select)
         - [1.2.3_video_introduction_to_labs](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.3_video_introduction_to_labs)
         - 1.2.4_lab_introduction_to_sql
         - 1.2.5_quiz_intro_to_sql (TODO)
