@@ -27,4 +27,8 @@
         - 2.2.2_lab_grouping_and_aggregations
         - 2.2.3_quiz_grouping_and_aggregations(TODO)
   
-
+- Module 3
+  - 3.0_introduction 
+    - [3.0.1_video_introduction_to_week03.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.0_introduction\3.0.1_video_introduction_to_week03.md)
+  - 3.1_one_to_many_relationships
+    - 
