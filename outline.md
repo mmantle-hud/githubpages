@@ -27,6 +27,8 @@
         - [2.2.1_reading_grouping_and_aggregates](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.1_reading_grouping_and_aggregates)
         - [2.2.2_reading_sql_functions](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.2_reading_sql_functions)
         - 2.2.2_lab_grouping_and_aggregations
+    - 2.3_week02_summary
+        - 2.3.1_quiz (TODO)
 
   
 - Module 3
@@ -40,3 +42,6 @@
   - 3.2_many_to_many_relationships
     - [3.2.1_reading_one_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.1_reading_one_to_many_relationships)
     - [3.2.2_reading_another_many_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.2_reading_another_many_to_many_relationships)
+    - 3.2.3_lab_many_to_many_relationships
+  - 3.3_week03_summary
+    - 3.3.1_quiz (TODO)
