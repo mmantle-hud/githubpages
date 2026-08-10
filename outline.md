@@ -19,9 +19,12 @@
     - 2.0_introduction
         - [2.0.1_video_introduction_to_week02](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.0_introduction/2.0.1_video_introduction_to_week02)
     - 2.1_sorting_and_filtering
-        - 2.1.1_reading_sorting_and_filtering
+        - [2.1.1_reading_sorting_and_filtering] (https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.1_reading_sorting_and_filtering)
         - 2.1.2_lab_sorting_and_filtering
+        - 2.1.3_quiz_sorting_and_filtering (TODO)
     - 2.2_grouping_and_aggregations
-        - 2.2.1_reading_grouping_and_aggregates
+        - [2.2.1_reading_grouping_and_aggregates] (https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.1_reading_grouping_and_aggregates)
         - 2.2.2_lab_grouping_and_aggregations
+        - 2.2.3_quiz_grouping_and_aggregations (TODO)
+  
 
