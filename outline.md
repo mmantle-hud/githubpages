@@ -10,10 +10,10 @@
         - 1.1.3_quiz_relational_database_concepts (TODO)
     - 1.2 Introduction to SQL
         - [1.2.1_reading_introduction_to_sql](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.1_reading_introduction_to_sql)
-        - [1.2.2_reading_creating_tables](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.2_reading_create)
+        - [1.2.2_reading_creating_tables](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.2_reading_create_tables)
         - [1.2.3_reading_insert_update_delete_and_select](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.3_reading_insert_update_delete_and_select)
         - [1.2.4_reading_writing_sql](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.4_reading_writing_sql)
-        - [1.2.5_video_introduction_to_labs](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.5_video_introduction_to_labs)
+        - [1.2.5_video_introduction_to_labs](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.5_lab_introduction_to_the_labs/1.2.5_video_introduction_to_labs)
         - 1.2.6_lab_introduction_to_sql
         - 1.2.7_quiz_intro_to_sql (TODO)
 
