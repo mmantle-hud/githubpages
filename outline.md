@@ -10,10 +10,12 @@
         - 1.1.3_quiz_relational_database_concepts (TODO)
     - 1.2 Introduction to SQL
         - [1.2.1_reading_introduction_to_sql](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.1_reading_introduction_to_sql)
-        - [1.2.2_reading_insert_update_delete_and_select](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.2_reading_insert_update_delete_and_select)
-        - [1.2.3_video_introduction_to_labs](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.3_video_introduction_to_labs)
-        - 1.2.4_lab_introduction_to_sql
-        - 1.2.5_quiz_intro_to_sql (TODO)
+        - [1.2.2_reading_creating_tables](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.2_reading_create)
+        - [1.2.3_reading_insert_update_delete_and_select](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.3_reading_insert_update_delete_and_select)
+        - [1.2.4_reading_writing_sql](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.4_reading_writing_sql)
+        - [1.2.5_video_introduction_to_labs](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.5_video_introduction_to_labs)
+        - 1.2.6_lab_introduction_to_sql
+        - 1.2.7_quiz_intro_to_sql (TODO)
 
 - Module 2
     - 2.0_introduction
@@ -21,14 +23,20 @@
     - 2.1_sorting_and_filtering
         - [2.1.1_reading_sorting_and_filtering](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.1_reading_sorting_and_filtering)
         - 2.1.2_lab_sorting_and_filtering
-        - 2.1.3_quiz_sorting_and_filtering(TODO)
     - 2.2_grouping_and_aggregations
         - [2.2.1_reading_grouping_and_aggregates](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.1_reading_grouping_and_aggregates)
+        - [2.2.2_reading_sql_functions](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.2_reading_sql_functions)
         - 2.2.2_lab_grouping_and_aggregations
-        - 2.2.3_quiz_grouping_and_aggregations(TODO)
+
   
 - Module 3
   - 3.0_introduction 
-    - [3.0.1_video_introduction_to_week03.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.0_introduction\3.0.1_video_introduction_to_week03.md)
+    - [3.0.1_video_introduction_to_week03.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.0_introduction\3.0.1_video_introduction_to_week03)
   - 3.1_one_to_many_relationships
-    - 
+    - [3.1.1_reading_one_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.1_one_to_many_relationships\3.1.1_reading_one_to_many_relationships)
+    - [3.1.2_reading_sql_joins](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.1_one_to_many_relationships\3.1.2_reading_sql_joins)
+    - [3.1.3_reading_more_one_to_many_examples](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.1_one_to_many_relationships\3.1.3_reading_more_one_to_many_examples)
+    - 3.1.4_lab_one_to_many_relationships
+  - 3.2_many_to_many_relationships
+    - [3.2.1_reading_one_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.1_reading_one_to_many_relationships)
+    - [3.2.2_reading_another_many_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.2_reading_another_many_to_many_relationships)
