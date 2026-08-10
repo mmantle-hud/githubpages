@@ -30,7 +30,6 @@
     - 2.3_week02_summary
         - 2.3.1_quiz (TODO)
 
-  
 - Module 3
   - 3.0_introduction 
     - [3.0.1_video_introduction_to_week03.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.0_introduction\3.0.1_video_introduction_to_week03)
@@ -40,7 +39,7 @@
     - [3.1.3_reading_more_one_to_many_examples](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.1_one_to_many_relationships\3.1.3_reading_more_one_to_many_examples)
     - 3.1.4_lab_one_to_many_relationships
   - 3.2_many_to_many_relationships
-    - [3.2.1_reading_one_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.1_reading_one_to_many_relationships)
+    - [3.2.1_reading_many_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.1_reading_many_to_many_relationships)
     - [3.2.2_reading_another_many_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.2_reading_another_many_to_many_relationships)
     - 3.2.3_lab_many_to_many_relationships
   - 3.3_week03_summary
