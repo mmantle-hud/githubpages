@@ -1,5 +1,5 @@
 # Module Outline: CIS7523 Relational Database and Web Integration
-## Module 1
+## Module 1 Introduction
 
 ### 1.0 Introduction 
 - [1.0.1_video_introduction_to_the_course](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.0_Introduction/1.0.1_video_introduction_to_the_course)
@@ -23,7 +23,7 @@
 ### 1.3 Week 01 Summary Quiz
 - 1.3.1_quiz (TODO)
 
-## Module 2
+## Module 2 Sorting, Filtering, Grouping and Aggregating
 ### 2.0 Introduction
 - [2.0.1_video_introduction_to_week02](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.0_introduction/2.0.1_video_introduction_to_week02)
 
@@ -39,7 +39,7 @@
 ### 2.3 Week02 Summary Quiz
 - 2.3.1_quiz (TODO)
 
-## Module 3
+## Module 3 Relationships
 ### 3.0 Introduction 
 - [3.0.1_video_introduction_to_week03.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.0_introduction\3.0.1_video_introduction_to_week03)
 
