@@ -56,7 +56,7 @@
 
 ### 3.3 One-to-One and Self Relationships
 - [3.3.1_reading_one_to_one_self_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.3_other_types_of_relationship\3.3.1_reading_one_to_one_self_relationships)
-- 3.3.2_quiz_identify_the_relationship 
+- [3.3.2_quiz_identify_the_relationship](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.3_other_types_of_relationship\3.3.2_quiz_identify_the_relationship)
 
 ### 3.4 Week03 Summary Quiz
 - 3.4.1_quiz (TODO)
