@@ -22,7 +22,8 @@
 - [1.2.7_intro_to_SQL_solutions](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.2_introduction_to_sql/1.2.7_intro_to_sql_solutions)
  
 ### 1.3 Week 01 Summary Quiz
-- 1.3.1_quiz (TODO)
+- [1.3.1_summary](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.3_summary/1.3.1_week1_summary)
+- 1.3.2_quiz (TODO)
 
 ## Module 2 Sorting, Filtering, Grouping and Aggregating
 ### 2.0 Introduction
