@@ -8,3 +8,9 @@ ORDER BY mark DESC;
 SELECT *
 FROM students
 WHERE mark > 90;
+
+-- Example SELECT statement
+SELECT * FROM students;
+-- Example UPDATE statement
+UPDATE students 
+SET mark=61 WHERE student_id=6;
