@@ -32,13 +32,16 @@
 ### 2.1 Sorting and Filtering
 - [2.1.1_reading_sorting_and_filtering](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.1_reading_sorting_and_filtering)
 - 2.1.2_lab_sorting_and_filtering
+- [2.1.3_lab_sorting_and_filtering](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.3_sorting_filtering_solutions.md)
 
 ### 2.2 Grouping and Aggregations
 - [2.2.1_reading_grouping_and_aggregates](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.1_reading_grouping_and_aggregates)
 - [2.2.2_reading_sql_functions](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.2_reading_sql_functions)
-- 2.2.2_lab_grouping_and_aggregations
+- 2.2.3_lab_grouping_and_aggregations
+- [2.2.4_lab_grouping_and_aggregations_solutions](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.4_grouping_aggregate_functions_solutions)
 
 ### 2.3 Week02 Summary Quiz
+- [2.3.1_summary of learning](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.3_summary/2.3.1_summary_of_learning)
 - 2.3.1_quiz (TODO)
 
 ## Module 3 Relationships
