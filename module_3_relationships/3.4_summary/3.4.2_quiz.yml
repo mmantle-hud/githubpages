@@ -1,0 +1,179 @@
+questions:
+  - questionId: understanding_one_to_many
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes a one-to-many relationship between two entities?"
+    options:
+      - answer: "A single instance of one entity can be associated with multiple instances of another entity, while each instance on the many side is associated with a single instance on the one side."
+        isCorrect: true
+        feedback: "Correct! This is the defining characteristic of a one-to-many relationship."
+      - answer: "Every instance of both entities must be associated with exactly one instance of the other entity."
+        isCorrect: false
+        feedback: "Incorrect. This describes a one-to-one relationship rather than a one-to-many relationship."
+      - answer: "An instance of either entity can be associated with any number of instances of the other entity."
+        isCorrect: false
+        feedback: "Incorrect. This describes a many-to-many relationship, where both sides can have multiple associations."
+      - answer: "One entity can exist only if exactly one instance of the other entity also exists."
+        isCorrect: false
+        feedback: "Incorrect. This describes a dependency rather than the cardinality of a one-to-many relationship."
+
+  - questionId: cardinality_meaning
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What does cardinality describe in an entity relationship?"
+    options:
+      - answer: "How many instances of one entity can be associated with instances of another entity."
+        isCorrect: true
+        feedback: "Correct! Cardinality describes the number of possible associations between instances of entities."
+      - answer: "The number of columns that an entity should contain."
+        isCorrect: false
+        feedback: "Incorrect. Cardinality concerns relationships between entities, not the number of attributes they have."
+      - answer: "The amount of data stored in each row of a table."
+        isCorrect: false
+        feedback: "Incorrect. Cardinality describes relationships between entities rather than the size of individual records."
+      - answer: "The order in which records must be stored in a database."
+        isCorrect: false
+        feedback: "Incorrect. Cardinality has nothing to do with the ordering of records."
+
+  - questionId: foreign_key_purpose
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the primary purpose of a foreign key when representing a relationship between relational database tables?"
+    options:
+      - answer: "To represent a reference from a row in one table to a related row in another table."
+        isCorrect: true
+        feedback: "Correct! A foreign key provides the database representation of a relationship by referencing a key in another table."
+      - answer: "To guarantee that every value in the column is unique."
+        isCorrect: false
+        feedback: "Incorrect. Uniqueness is a property normally associated with a primary key or unique constraint. Foreign key values can be repeated."
+      - answer: "To determine the number of columns that a table can contain."
+        isCorrect: false
+        feedback: "Incorrect. Foreign keys represent relationships between tables and do not determine their structure in this way."
+      - answer: "To store a copy of every attribute from the related table."
+        isCorrect: false
+        feedback: "Incorrect. A foreign key stores a reference to a related row rather than duplicating all of its attributes."
+
+  - questionId: parent_child_relationship
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "In a one-to-many relationship, how can you identify which table is on the many side?"
+    options:
+      - answer: "It is the table in which the key identifying a record in the parent table can appear in multiple rows."
+        isCorrect: true
+        feedback: "Correct! Repeated references to the same parent record are characteristic of the many side of a one-to-many relationship."
+      - answer: "It is always the table with the largest number of columns."
+        isCorrect: false
+        feedback: "Incorrect. The number of columns does not determine which side of a relationship a table is on."
+      - answer: "It is always the table containing the primary key."
+        isCorrect: false
+        feedback: "Incorrect. Both tables normally have primary keys. The child table additionally contains a foreign key referencing the parent."
+      - answer: "It is the table that contains the fewest records."
+        isCorrect: false
+        feedback: "Incorrect. The number of records does not determine relationship cardinality."
+
+  - questionId: relationship_optionality
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What does optionality describe in an entity relationship?"
+    options:
+      - answer: "Whether an entity must participate in a relationship or can exist without a related entity."
+        isCorrect: true
+        feedback: "Correct! Optionality describes whether participation in a relationship is optional or mandatory."
+      - answer: "How many attributes an entity is allowed to have."
+        isCorrect: false
+        feedback: "Incorrect. Optionality concerns participation in relationships, not the number of attributes."
+      - answer: "Whether a database table can contain duplicate rows."
+        isCorrect: false
+        feedback: "Incorrect. Duplicate rows and uniqueness are separate concerns from relationship optionality."
+      - answer: "Whether the relationship involves one table or multiple tables."
+        isCorrect: false
+        feedback: "Incorrect. A relationship by definition concerns associations between entities; optionality describes whether those associations are required."
+
+  - questionId: referential_integrity_concept
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Why is referential integrity important when modelling relationships between relational database tables?"
+    options:
+      - answer: "It prevents references from pointing to records that do not exist and helps prevent referenced parent records from being removed while they are still in use."
+        isCorrect: true
+        feedback: "Correct! Referential integrity ensures that relationships remain valid by preventing invalid references and inappropriate deletion of referenced records."
+      - answer: "It ensures that every table contains exactly the same number of records."
+        isCorrect: false
+        feedback: "Incorrect. Referential integrity concerns the validity of references between related records, not the number of records in each table."
+      - answer: "It ensures that every value in every table is unique."
+        isCorrect: false
+        feedback: "Incorrect. Referential integrity is specifically concerned with relationships and references between records."
+      - answer: "It automatically creates relationships between any tables containing similarly named columns."
+        isCorrect: false
+        feedback: "Incorrect. Relationships must be explicitly modelled; matching column names do not automatically create referential integrity."
+  - questionId: understanding_many_to_many
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes a many-to-many relationship between two entities?"
+    options:
+      - answer: "An instance of either entity can be associated with multiple instances of the other entity."
+        isCorrect: true
+        feedback: "Correct! In a many-to-many relationship, both sides can have multiple associations with the other side."
+      - answer: "Each instance of both entities can only be associated with one instance of the other entity."
+        isCorrect: false
+        feedback: "Incorrect. This describes a one-to-one relationship rather than a many-to-many relationship."
+      - answer: "One entity can have multiple associations, but each instance of the other entity can only have one association."
+        isCorrect: false
+        feedback: "Incorrect. This describes a one-to-many relationship. In a many-to-many relationship, both sides can have multiple associations."
+      - answer: "Both entities must contain the same number of records."
+        isCorrect: false
+        feedback: "Incorrect. The number of records in each entity has no bearing on whether their relationship is many-to-many."
+
+  - questionId: junction_table_purpose
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Why is a junction table needed when implementing a many-to-many relationship in a relational database?"
+    options:
+      - answer: "It provides a separate row for each association between the two entities, allowing each entity to be associated with multiple records of the other."
+        isCorrect: true
+        feedback: "Correct! A junction table represents the individual associations and allows both sides of the relationship to have many related records."
+      - answer: "It stores all the attributes from both entities in a single table."
+        isCorrect: false
+        feedback: "Incorrect. A junction table primarily represents relationships; it does not replace the tables containing the entities themselves."
+      - answer: "It ensures that each entity can only be associated with one record from the other entity."
+        isCorrect: false
+        feedback: "Incorrect. The purpose of a junction table is to support multiple associations on both sides."
+      - answer: "It is required because relational databases cannot contain more than two tables."
+        isCorrect: false
+        feedback: "Incorrect. Relational databases can contain many tables. The junction table is specifically used to represent many-to-many relationships."
+
+  - questionId: composite_primary_key
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Why is a combination of two foreign key columns commonly used as the primary key of a junction table?"
+    options:
+      - answer: "The combination uniquely identifies each association between the two entities, preventing the same association from being recorded more than once."
+        isCorrect: true
+        feedback: "Correct! Although either foreign key may appear multiple times individually, their combination can uniquely identify an association."
+      - answer: "Each foreign key must contain a unique value throughout the junction table."
+        isCorrect: false
+        feedback: "Incorrect. Each foreign key can legitimately appear many times because an entity can have many relationships."
+      - answer: "A composite primary key allows the junction table to contain duplicate associations."
+        isCorrect: false
+        feedback: "Incorrect. The primary key prevents duplicate combinations of the columns that make up the key."
+      - answer: "A composite primary key is required whenever a table contains two or more columns."
+        isCorrect: false
+        feedback: "Incorrect. A composite primary key is used when multiple columns together are needed to uniquely identify a row."
+
+  - questionId: many_to_many_junction_relationships
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "How does a junction table represent a many-to-many relationship in terms of one-to-many relationships?"
+    options:
+      - answer: "It transforms the many-to-many relationship into two one-to-many relationships, with the junction table on the many side of each."
+        isCorrect: true
+        feedback: "Correct! Each entity has a one-to-many relationship with the junction table, which allows the original many-to-many relationship to be represented relationally."
+      - answer: "It creates two one-to-one relationships between the original entities."
+        isCorrect: false
+        feedback: "Incorrect. The original entities can still have many associations; the junction table represents these through two one-to-many relationships."
+      - answer: "It creates a separate parent table for each entity."
+        isCorrect: false
+        feedback: "Incorrect. The original entity tables remain, while the junction table records the associations between them."
+      - answer: "It removes the relationship between the original entities and stores the data independently."
+        isCorrect: false
+        feedback: "Incorrect. The junction table exists specifically to represent and preserve the relationship between the two entities."

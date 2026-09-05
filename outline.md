@@ -53,15 +53,16 @@
 - [3.1.2_reading_sql_joins](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.1_one_to_many_relationships\3.1.2_reading_sql_joins)
 - [3.1.3_reading_more_one_to_many_examples](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.1_one_to_many_relationships\3.1.3_reading_more_one_to_many_examples)
 - 3.1.4_lab_one_to_many_relationships
-
+- [3.1.5_one-to-many solutions](https://mmantle-hud.github.io/githubpages/module_3_relationships/3.1_one_to_many_relationships/3.1.5_board_games_one_to_many_queries_solutions)
 ### 3.2 Many-to-Many Relationships
 - [3.2.1_reading_many_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.1_reading_many_to_many_relationships)
 - [3.2.2_reading_another_many_to_many_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.2_many_to_many_relationships\3.2.2_reading_another_many_to_many_relationships)
 - 3.2.3_lab_many_to_many_relationships
-
+- [3.2.4 Many-to-Many Relationships Solutions](module_3_relationships/3.2_many_to_many_relationships/3.2.4_board_games_many_to_many_queries_solutions)
 ### 3.3 One-to-One and Self Relationships
-- [3.3.1_reading_one_to_one_self_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.3_other_types_of_relationship\3.3.1_reading_one_to_one_self_relationships)
-- [3.3.2_quiz_identify_the_relationship](https://mmantle-hud.github.io/githubpages/module_3_relationships\3.3_other_types_of_relationship\3.3.2_quiz_identify_the_relationship)
+- [3.3.1_reading_one_to_one_self_relationships.md](https://mmantle-hud.github.io/githubpages/module_3_relationships/3.3_other_types_of_relationship/3.3.1_reading_one_to_one_self_relationships)
+- [3.3.2_quiz_identify_the_relationship](https://mmantle-hud.github.io/githubpages/module_3_relationships/3.3_other_types_of_relationship/3.3.2_quiz_identify_the_relationship)
 
 ### 3.4 Week03 Summary Quiz
-- 3.4.1_quiz (TODO)
+- [3.4.1 Weekly Summary](https://mmantle-hud.github.io/githubpages/module_3_relationships/3.4_summary/3.4.1_summary_of_learning)
+- 3.4.2_quiz (TODO)
