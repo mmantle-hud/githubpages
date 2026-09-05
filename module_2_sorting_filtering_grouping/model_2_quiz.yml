@@ -1,0 +1,181 @@
+questions:
+  - questionId: db_sql_sorting
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes the purpose of the ORDER BY clause in SQL?"
+    options:
+      - answer: "It determines the order in which rows are returned by the query."
+        isCorrect: true
+        feedback: "Correct! ORDER BY controls the ordering of rows in the query result. You can specify ascending or descending order and can sort using multiple columns."
+      - answer: "It determines which rows are included in the query result."
+        isCorrect: false
+        feedback: "Incorrect. WHERE is used to filter which rows are included. ORDER BY determines how the selected rows are arranged."
+      - answer: "It determines which columns are included in the query result."
+        isCorrect: false
+        feedback: "Incorrect. SELECT determines which columns are included. ORDER BY determines how the resulting rows are arranged."
+      - answer: "It limits the number of rows returned by the query."
+        isCorrect: false
+        feedback: "Incorrect. LIMIT is used to restrict the number of rows returned."
+    
+  - questionId: db_sql_filtering
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes the purpose of the WHERE clause in SQL?"
+    options:
+      - answer: "It filters rows so that only rows satisfying a specified condition are included in the result."
+        isCorrect: true
+        feedback: "Correct! WHERE applies a condition to individual rows and excludes rows that do not satisfy the condition."
+      - answer: "It sorts the rows in the result."
+        isCorrect: false
+        feedback: "Incorrect. ORDER BY is used to sort rows. WHERE is used to filter rows."
+      - answer: "It removes duplicate rows from the result."
+        isCorrect: false
+        feedback: "Incorrect. DISTINCT is used to remove duplicate result rows."
+      - answer: "It limits the number of rows returned."
+        isCorrect: false
+        feedback: "Incorrect. LIMIT is used to limit the number of rows returned."
+
+  - questionId: db_sql_limit_offset
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes how LIMIT and OFFSET can be used together?"
+    options:
+      - answer: "LIMIT controls how many rows are returned, while OFFSET controls how many rows are skipped before returning results."
+        isCorrect: true
+        feedback: "Correct! LIMIT can restrict the number of rows returned, while OFFSET skips a specified number of rows. Together they can be used to implement pagination."
+      - answer: "LIMIT sorts the rows, while OFFSET filters the rows."
+        isCorrect: false
+        feedback: "Incorrect. Neither LIMIT nor OFFSET sorts or filters rows. ORDER BY sorts rows and WHERE filters them."
+      - answer: "LIMIT skips rows, while OFFSET determines how many rows are returned."
+        isCorrect: false
+        feedback: "Incorrect. The roles are reversed. OFFSET skips rows and LIMIT controls how many rows are returned."
+      - answer: "LIMIT removes duplicate rows, while OFFSET sorts the remaining rows."
+        isCorrect: false
+        feedback: "Incorrect. DISTINCT removes duplicate result rows and ORDER BY sorts rows. LIMIT and OFFSET control which portion of the result is returned."
+
+  - questionId: db_sql_null_filtering
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes how NULL should be handled when filtering data in SQL?"
+    options:
+      - answer: "NULL represents an unknown or missing value and should be tested using IS NULL or IS NOT NULL rather than ordinary equality comparisons."
+        isCorrect: true
+        feedback: "Correct! NULL represents the absence of a known value. SQL provides IS NULL and IS NOT NULL for testing whether a value is NULL."
+      - answer: "NULL is equivalent to zero, so it can be tested using = 0."
+        isCorrect: false
+        feedback: "Incorrect. NULL does not mean zero. NULL represents an unknown or missing value and requires IS NULL or IS NOT NULL when testing for it."
+      - answer: "NULL is equivalent to an empty string, so it can be tested using = ''."
+        isCorrect: false
+        feedback: "Incorrect. NULL and an empty string are different concepts. NULL represents an unknown or missing value."
+      - answer: "NULL can be tested using the = operator in the same way as any other value."
+        isCorrect: false
+        feedback: "Incorrect. NULL cannot be reliably tested using ordinary equality. Use IS NULL or IS NOT NULL."
+
+  - questionId: db_sql_aggregate_functions
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes the purpose of an aggregate function in SQL?"
+    options:
+      - answer: "It groups rows according to the values in one or more columns."
+        isCorrect: false
+        feedback: "Incorrect. GROUP BY is used to divide rows into groups. Aggregate functions perform calculations over rows or groups of rows."
+      - answer: "It performs a calculation over multiple rows and produces a summary value."
+        isCorrect: true
+        feedback: "Correct! Aggregate functions such as COUNT, SUM, AVG, MIN, and MAX perform calculations over multiple rows."
+      - answer: "It filters individual rows according to a condition."
+        isCorrect: false
+        feedback: "Incorrect. WHERE is used to filter individual rows. Aggregate functions perform calculations over rows."
+      - answer: "It changes the order in which rows are returned."
+        isCorrect: false
+        feedback: "Incorrect. ORDER BY controls the ordering of rows. Aggregate functions perform calculations over rows."
+
+  - questionId: db_sql_group_by
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What happens when GROUP BY is used with a column in a SQL query?"
+    options:
+      - answer: "Rows with the same value in the specified column are placed into the same group, with each group contributing a row to the result."
+        isCorrect: true
+        feedback: "Correct! GROUP BY divides rows into groups based on matching values. Each group can then be summarised using aggregate functions."
+      - answer: "Duplicate rows are permanently removed from the underlying table."
+        isCorrect: false
+        feedback: "Incorrect. GROUP BY affects the query result; it does not modify or delete rows from the underlying table."
+      - answer: "Only the first row containing each value is returned."
+        isCorrect: false
+        feedback: "Incorrect. GROUP BY creates groups rather than simply selecting the first row from each group."
+      - answer: "All rows are combined into one group regardless of their values."
+        isCorrect: false
+        feedback: "Incorrect. Rows are divided into groups according to the values of the columns specified in GROUP BY."
+
+  - questionId: db_sql_having_where
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the key difference between WHERE and HAVING when working with grouped data?"
+    options:
+      - answer: "WHERE sorts rows before grouping, while HAVING sorts groups after grouping."
+        isCorrect: false
+        feedback: "Incorrect. ORDER BY is used for sorting. WHERE filters rows and HAVING filters groups."
+      - answer: "WHERE filters groups, while HAVING filters individual rows."
+        isCorrect: false
+        feedback: "Incorrect. The roles are reversed. WHERE filters individual rows before grouping, while HAVING filters groups after grouping."
+      - answer: "WHERE filters individual rows before grouping, while HAVING filters groups after grouping."
+        isCorrect: true
+        feedback: "Correct! WHERE is applied to individual rows before grouping, while HAVING is used to filter the groups produced by GROUP BY."
+      - answer: "WHERE and HAVING always perform exactly the same operation."
+        isCorrect: false
+        feedback: "Incorrect. Although both can filter results, WHERE filters rows before grouping and HAVING filters groups after grouping."
+
+  - questionId: db_sql_null_aggregate
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement correctly describes how NULL values are generally handled by SQL aggregate functions?"
+    options:
+      - answer: "All aggregate functions count NULL values as zero."
+        isCorrect: false
+        feedback: "Incorrect. NULL is not automatically treated as zero. Most aggregate functions ignore NULL values."
+      - answer: "NULL values cause every aggregate function to return NULL."
+        isCorrect: false
+        feedback: "Incorrect. Most aggregate functions ignore NULL values rather than returning NULL because of them."
+      - answer: "COUNT(*) ignores rows containing NULL, while COUNT(column) includes them."
+        isCorrect: false
+        feedback: "Incorrect. COUNT(*) counts rows regardless of NULL values. COUNT(column) counts only rows where that column is not NULL."
+      - answer: "Most aggregate functions ignore NULL values, while COUNT(*) counts rows regardless of whether they contain NULL values."
+        isCorrect: true
+        feedback: "Correct! Most aggregate functions ignore NULL values. COUNT(*) is different because it counts rows, including rows containing NULL values."
+
+  - questionId: db_sql_functions_concat
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which SQL function would you use to combine multiple text values into a single value?"
+    options:
+      - answer: "AVG"
+        isCorrect: false
+        feedback: "Incorrect. AVG is used to calculate an average."
+      - answer: "COALESCE"
+        isCorrect: false
+        feedback: "Incorrect. COALESCE selects the first non-NULL value from a list."
+      - answer: "CONCAT"
+        isCorrect: true
+        feedback: "Correct! CONCAT joins multiple values together into a single text value."
+      - answer: "ROUND"
+        isCorrect: false
+        feedback: "Incorrect. ROUND is used to round numeric values."
+
+  - questionId: db_sql_functions_coalesce
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "How does the COALESCE function choose the value it returns?"
+    options:
+      - answer: "It returns the first non-NULL value from its arguments, working from left to right"
+        isCorrect: true
+        feedback: "Correct! COALESCE examines its arguments from left to right and returns the first non-NULL value."
+      - answer: "It always returns the last value in the list"
+        isCorrect: false
+        feedback: "Incorrect. COALESCE returns the first non-NULL value, not necessarily the last value."
+      - answer: "It returns NULL whenever any argument is NULL"
+        isCorrect: false
+        feedback: "Incorrect. COALESCE is specifically useful for handling NULL values."
+      - answer: "It returns the average of all non-NULL values"
+        isCorrect: false
+        feedback: "Incorrect. AVG calculates an average. COALESCE selects a value."
+

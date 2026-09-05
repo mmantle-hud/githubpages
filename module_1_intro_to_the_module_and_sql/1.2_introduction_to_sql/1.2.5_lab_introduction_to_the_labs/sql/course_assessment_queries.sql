@@ -13,4 +13,5 @@ WHERE mark > 90;
 SELECT * FROM students;
 -- Example UPDATE statement
 UPDATE students 
-SET mark=61 WHERE student_id=6;
+SET mark=61 
+WHERE student_id=6;
