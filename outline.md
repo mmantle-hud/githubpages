@@ -32,7 +32,7 @@
 ### 2.1 Sorting and Filtering
 - [2.1.1_reading_sorting_and_filtering](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.1_reading_sorting_and_filtering)
 - 2.1.2_lab_sorting_and_filtering
-- [2.1.3_lab_sorting_and_filtering](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.3_sorting_filtering_solutions.md)
+- [2.1.3_lab_sorting_and_filtering solutions](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.1_sorting_and_filtering/2.1.3_sorting_filtering_solutions.md)
 
 ### 2.2 Grouping and Aggregations
 - [2.2.1_reading_grouping_and_aggregates](https://mmantle-hud.github.io/githubpages/module_2_sorting_filtering_grouping/2.2_grouping_and_aggregations/2.2.1_reading_grouping_and_aggregates)
