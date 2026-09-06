@@ -1,0 +1,5 @@
+- Need to do how to create the diagrams
+- Need to do historical, 
+- n-ary relationships
+- Conditional / Polymorphic Associations
+- Subtypes and Supertypes
