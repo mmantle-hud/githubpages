@@ -1,0 +1,125 @@
+questions:
+  - questionId: conceptual_vs_logical_models
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the key difference between a conceptual model and a logical model in relational database design?"
+    options:
+      - answer: "A conceptual model describes entities, attributes, and relationships without technical database details, while a logical model maps these concepts to tables, columns, keys, junction tables, and data types."
+        isCorrect: true
+        feedback: "Correct! The conceptual model focuses on the real-world data and relationships and is designed to be understandable to stakeholders. The logical model translates this into a specification for a relational database, including tables, columns, primary and foreign keys, junction tables, and data types."
+      - answer: "A conceptual model contains primary and foreign keys, while a logical model only describes real-world entities and relationships."
+        isCorrect: false
+        feedback: "Incorrect. It is the logical model that introduces database-specific concepts such as primary keys, foreign keys, and data types. The conceptual model deliberately avoids these technical details."
+      - answer: "A conceptual model is the physical implementation of the database, while a logical model is used only to gather requirements from stakeholders."
+        isCorrect: false
+        feedback: "Incorrect. The conceptual model is used to capture requirements and establish a shared understanding of the data. The logical model provides a general specification for implementing that design as a relational database."
+      - answer: "The conceptual and logical models are identical; the only difference is the way their ERDs are displayed."
+        isCorrect: false
+        feedback: "Incorrect. The models serve different purposes. The conceptual model describes the real-world entities and relationships without technical database details, while the logical model translates those concepts into a relational database design."
+
+  - questionId: db_primary_key_requirements
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which three rules must every primary key strictly follow?"
+    options:
+      - answer: "Unique, static, and mandatory"
+        isCorrect: true
+        feedback: "Correct! A primary key must be unique so no two rows have the same value, static so its value does not change over time, and mandatory so it can never be NULL or empty."
+      - answer: "Unique, editable, and optional"
+        isCorrect: false
+        feedback: "Incorrect. A primary key must be static, meaning its value should not change, and mandatory, meaning it cannot be NULL or empty."
+      - answer: "Readable, unique, and descriptive"
+        isCorrect: false
+        feedback: "Incorrect. Although a primary key may sometimes have a meaningful value, being readable or descriptive is not a requirement. It must be unique, static, and mandatory."
+      - answer: "Mandatory, changeable, and indexed"
+        isCorrect: false
+        feedback: "Incorrect. A primary key must be static rather than changeable. Being indexed is common for primary keys but is not one of the three rules described here."
+
+  - questionId: db_composite_vs_surrogate_keys
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Why might a surrogate key be preferred over a composite key?"
+    options:
+      - answer: "A single surrogate key is easier to use as a foreign key in other tables and can make operations such as sorting and joining more efficient."
+        isCorrect: true
+        feedback: "Correct! A single id number is easier to reference from child tables, and simple integer keys can improve the efficiency of operations such as sorting and joining."
+      - answer: "A surrogate key guarantees uniqueness."
+        isCorrect: false
+        feedback: "Incorrect. A composite key can also provide this constraint by ensuring a combination of values cannot appear more than once."
+      - answer: "A surrogate key removes the need for foreign keys in related tables."
+        isCorrect: false
+        feedback: "Incorrect. Surrogate keys can actually make foreign keys easier to manage because related tables only need to store a single value."
+
+  - questionId: data_dictionary_purpose
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the main purpose of a data dictionary when designing a relational database?"
+    options:
+      - answer: "To record information about entities and attributes that is not easy to capture on an ERD"
+        isCorrect: true
+        feedback: "Correct! A data dictionary provides additional information about entities and their attributes that may not be practical to represent on an ERD."
+      - answer: "To replace the ERD by showing relationships between all entities"
+        isCorrect: false
+        feedback: "Incorrect. The data dictionary complements the ERD rather than replacing it. The ERD is used to show entities and their relationships."
+      - answer: "To store the actual records entered into the database"
+        isCorrect: false
+        feedback: "Incorrect. A data dictionary describes the structure and characteristics of the data; it does not store the actual database records."
+      - answer: "To simply list the names of database tables and describe their attributes. Some people find viewing the data in a table easier than on an ERD. "
+        isCorrect: false
+        feedback: "Incorrect. The data dictionary includes additional information about entities and their attributes that may not be practical to represent on an ERD."
+
+  - questionId: db_associative_entity
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "When a many-to-many relationship requires additional data to be stored about the relationship, what is the relationship typically represented as?"
+    options:
+      - answer: "An associative entity"
+        isCorrect: true
+        feedback: "Correct! When additional data needs to be stored as part of a many-to-many relationship, the relationship becomes an associative entity. For example, IngredientRecipe can store the quantity and unit of an ingredient used in a recipe."
+      - answer: "A primary entity"
+        isCorrect: false
+        feedback: "Incorrect. A primary entity is not the term used for an entity created to store information about a relationship."
+      - answer: "A foreign key"
+        isCorrect: false
+        feedback: "Incorrect. A foreign key can be used to implement relationships in a relational database, but it is not the entity itself."
+      - answer: "An attribute entity"
+        isCorrect: false
+        feedback: "Incorrect. Attributes describe entities, whereas an associative entity represents a relationship that requires additional data to be stored."
+  
+  - questionId: db_logical_vs_physical_model
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is a key difference between a logical data model and a physical data model?"
+    options:
+      - answer: "The physical model specifies precise implementation details such as data types for a specific RDBMS"
+        isCorrect: true
+        feedback: "Correct! A physical model is a precise blueprint for implementing the database using a specific RDBMS, such as PostgreSQL, and specifies details such as data types, nullability, and constraints."
+      - answer: "The logical model contains the exact SQL data types used by the chosen RDBMS"
+        isCorrect: false
+        feedback: "Incorrect. Selecting precise SQL data types, such as SMALLINT or VARCHAR(255), is part of the physical model."
+      - answer: "The physical model only shows entities and relationships, without implementation details"
+        isCorrect: false
+        feedback: "Incorrect. The physical model includes implementation details needed to create the database, including data types and constraints."
+      - answer: "There is no difference between a logical model and a physical model"
+        isCorrect: false
+        feedback: "Incorrect. Although they may look similar, the physical model adds precise implementation details for a particular RDBMS."
+
+  - questionId: db_requirements_stakeholders
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Who is considered a stakeholder when gathering requirements for a database system?"
+    options:
+      - answer: "Any individual or group that has a direct interest in, interacts with, or is affected by the database system"
+        isCorrect: true
+        feedback: "Correct! Stakeholders include anyone with a direct interest in, who interacts with, or who is affected by the database system. This can include data providers, data consumers, and technical staff."
+      - answer: "Only software developers who build the database"
+        isCorrect: false
+        feedback: "Incorrect. Developers are one type of stakeholder, but stakeholders can also include data providers, data consumers, administrators, and other groups affected by the system."
+      - answer: "Only the people who enter data into the database"
+        isCorrect: false
+        feedback: "Incorrect. People who enter data are data providers, but stakeholders also include people who consume the data and technical staff who build and maintain the system."
+      - answer: "Only the customers who use the website"
+        isCorrect: false
+        feedback: "Incorrect. Customers or users may be stakeholders, but the term also includes other groups such as content administrators, marketing teams, developers, and database administrators."
+
+
