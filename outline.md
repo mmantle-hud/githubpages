@@ -70,12 +70,14 @@
 ## 4 Database design
 ### Introduction to Database Design
 - [4.1.1 Notes Introduction to Database Design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.1_the_database_design_process/4.1.1_notes_the_database_design_process)
-- [4.1.2 Exercise - Hotel Finder App](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.1_the_database_design_process/4.1.3_exercise_database_design_hotels)
-- [4.1.3 Example Solution - Hotel Finder App](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.1_the_database_design_process/4.1.4_solution_database_design_hotels)
+- [4.1.2 Creating ERDs](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.1_the_database_design_process/4.1.2_notes_creating_ERDS)
+- [4.1.3 Exercise - Hotel Finder App](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.1_the_database_design_process/4.1.3_exercise_database_design_hotels)
+- [4.1.4 Example Solution - Hotel Finder App](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.1_the_database_design_process/4.1.4_solution_database_design_hotels)
 
 ### Solving Common Database Design Problems
 - [4.2.1 Look-up Tables](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.1_look-up_tables)
 - [4.2.2 Associative Relationships][text](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.2_associative_relationships)
 - [4.2.3 N-ary Relationships][text](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.3_n-ary_relationships)
 - [4.2.4 Revisiting the My Movie Diary database design][text](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.4_revisiting_my_movie_diary)
-- [4.2.5 Exercise Independent Coffee Shop database design]
+- [4.2.5 Exercise Independent Coffee Shop database design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.2_exercise_database_design_coffee_shop)
+- [4.2.5 Solution Independent Coffee Shop database design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.3_solution_database_design_coffee_shop)
