@@ -79,5 +79,8 @@
 - [4.2.2 Associative Relationships](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.2_associative_relationships)
 - [4.2.3 N-ary Relationships](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.3_n-ary_relationships)
 - [4.2.4 Revisiting the My Movie Diary database design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.4_revisiting_my_movie_diary)
-- [4.2.5 Exercise Independent Coffee Shop database design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.2_exercise_database_design_coffee_shop)
+- [4.2.5 Exercise Independent Coffee Shop database design](https://mmantle-hud.gi thub.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.2_exercise_database_design_coffee_shop)
 - [4.2.5 Solution Independent Coffee Shop database design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.3_solution_database_design_coffee_shop)
+
+### Summary
+- [Weekly Summary](https://mmantle-hud.gi thub.io/githubpages/module_4_database_design/4.3_summary/4.3.1_weekly_summary)
