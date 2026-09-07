@@ -83,4 +83,4 @@
 - [4.2.5 Solution Independent Coffee Shop database design](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.2_database_design_techniques/4.2.3_solution_database_design_coffee_shop)
 
 ### Summary
-- [Weekly Summary](https://mmantle-hud.gi thub.io/githubpages/module_4_database_design/4.3_summary/4.3.1_weekly_summary)
+- [Weekly Summary](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.3_summary/4.3.1_weekly_summary)
