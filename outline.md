@@ -6,6 +6,7 @@
 - 1.0.2_readings_and_resources (standard text)
 - 1.0.3_additional_support_resources (standard text)
 - [1.0.4_meet_the_teaching_team](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.0_Introduction/1.0.4_meet_the_teaching_team)
+- [1.0.5_overview_of_assessment](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.0_Introduction/1.0.5_overview_of_assessment)
 
 ### 1.1 Introduction to Relational Databases
 - [1.1.1_reading_introduction_to_relational_databases](https://mmantle-hud.github.io/githubpages/module_1_intro_to_the_module_and_sql/1.1_introduction_to_relational_databases/1.1.1_reading_introduction_to_relational_databases)
