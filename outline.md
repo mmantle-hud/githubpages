@@ -87,4 +87,13 @@
 - [Weekly Summary](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.3_summary/4.3.1_weekly_summary)
 
 ## 5 Normalisation
-### [5.0.2 Case Study Happy Pizza](module_5_normalisation/5.0_introduction/5.0.2_notes_case_study_happy_pizza.md)
+### Intro
+- [5.0.1 Intro Video ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.1_video_introduction_to_normalisation)
+- [5.0.2 Case Study Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.2_notes_case_study_happy_pizza)
+### Normalisation
+- [5.1.1 Normalisation ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.1_notes_normalisation)
+- [5.1.2 Normalising the Happy Pizza Database](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalising_the-happy_pizza_database)
+- [5.1.3 Exercise Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_exercise_normalisation)
+- [5.1.4 Solution Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.4_solution_normalisation)
+### Summary
+- [5.2.1 Weekly Summary](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.2_summary/5.2.1_weekly_summary)

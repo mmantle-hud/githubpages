@@ -1,0 +1,93 @@
+
+
+questions:
+  - questionId: db_database_anomalies_understanding
+      typeName: multipleChoice
+      shuffleOptions: true
+      prompt: "What is a database anomaly?"
+      options:
+        - answer: "A problem caused by the structure of a database that can lead to data inconsistency or accidental data loss when data is inserted, updated, or deleted."
+          isCorrect: true
+          feedback: "Correct! Database anomalies are problems caused by the way data is structured and stored. They can result in inconsistent data or unintended data loss during insert, update, or delete operations."
+        - answer: "An error that occurs whenever a database contains more than one table."
+          isCorrect: false
+          feedback: "Incorrect. Multiple tables are not inherently a problem. In fact, splitting related data into appropriate tables can help prevent anomalies."
+        - answer: "A failure of the database server that prevents users from accessing their data."
+          isCorrect: false
+          feedback: "Incorrect. Server failures are operational or technical problems, rather than database anomalies caused by the structure of stored data."
+        - answer: "A rule that prevents duplicate values from being entered into a database."
+          isCorrect: false
+          feedback: "Incorrect. Rules that prevent duplicate values, such as unique constraints, are database constraints rather than anomalies."
+
+  - questionId: db_multivalued_columns_understanding
+      typeName: multipleChoice
+      shuffleOptions: true
+      prompt: "Why are multi-valued columns generally considered a poor database design?"
+      options:
+        - answer: "They make it harder to query, aggregate, and update individual values consistently."
+          isCorrect: true
+          feedback: "Correct! Storing multiple values in a single column makes searching and aggregating individual values more difficult and can lead to update problems and inconsistent values."
+        - answer: "They prevent a table from having a primary key."
+          isCorrect: false
+          feedback: "Incorrect. A table can still have a primary key even if one of its columns contains multiple values."
+        - answer: "They always cause the database to store duplicate rows."
+          isCorrect: false
+          feedback: "Incorrect. Multi-valued columns do not necessarily create duplicate rows. The main issue is that multiple values are being stored together in a single field."
+        - answer: "They can only contain numeric values."
+          isCorrect: false
+          feedback: "Incorrect. A multi-valued column can contain text or other types of values. The problem is storing multiple values in a single field, not the type of those values."
+
+  - questionId: db_first_normal_form_atomic_values
+      typeName: multipleChoice
+      shuffleOptions: true
+      prompt: "Which statement best describes the requirement for a table to be in First Normal Form (1NF)?"
+      options:
+        - answer: "Each field should contain a single atomic value that cannot be meaningfully divided into smaller values for the purposes of the database."
+          isCorrect: true
+          feedback: "Correct! 1NF requires fields to contain atomic values. Whether a value is considered atomic depends on the requirements of the database and how the data needs to be queried or processed."
+        - answer: "Every table must contain only one column and one row."
+          isCorrect: false
+          feedback: "Incorrect. 1NF does not restrict the number of rows or columns in a table. It concerns the values stored within individual fields."
+        - answer: "Every column must contain a value of the same data type and must never contain NULL."
+          isCorrect: false
+          feedback: "Incorrect. Consistent data types are important, but 1NF is specifically concerned with atomic values. NULL values are not what defines a violation of 1NF."
+        - answer: "Every piece of information must be stored in a separate table."
+          isCorrect: false
+          feedback: "Incorrect. 1NF does not require every piece of information to have its own table. Separating data into related tables is part of broader database design and further normalisation."
+
+  - questionId: db_second_normal_form_understanding
+      typeName: multipleChoice
+      shuffleOptions: true
+      prompt: "Which statement correctly describes the requirement for a table to be in Second Normal Form (2NF)?"
+      options:
+        - answer: "The table must be in 1NF, and every non-primary-key column must depend on the whole primary key rather than only part of it."
+          isCorrect: true
+          feedback: "Correct! 2NF requires 1NF first, and every non-primary-key attribute must be functionally dependent on the entire primary key. This is only relevant when the primary key is composite."
+        - answer: "Every non-primary-key column must depend on another non-primary-key column."
+          isCorrect: false
+          feedback: "Incorrect. 2NF is concerned with whether non-primary-key columns depend on the whole primary key, not on other non-primary-key columns."
+        - answer: "Every table must have a composite primary key containing at least two columns."
+          isCorrect: false
+          feedback: "Incorrect. 2NF only addresses partial dependencies that can occur with composite primary keys. A table with a single-column primary key is already considered to satisfy the 2NF dependency requirement."
+        - answer: "Every column must contain an atomic value, with no multi-valued fields."
+          isCorrect: false
+          feedback: "Incorrect. This describes the requirement for 1NF. 2NF additionally requires non-primary-key columns to depend on the whole primary key."
+
+  - questionId: db_third_normal_form_understanding
+      typeName: multipleChoice
+      shuffleOptions: true
+      prompt: "What is the main purpose of Third Normal Form (3NF)?"
+      options:
+        - answer: "To ensure that non-primary-key columns depend on the primary key and not on other non-primary-key columns."
+          isCorrect: true
+          feedback: "Correct! 3NF removes transitive dependencies. Each non-primary-key column should depend directly on the primary key rather than indirectly through another non-key column."
+        - answer: "To ensure that every table has a composite primary key."
+          isCorrect: false
+          feedback: "Incorrect. A composite primary key is not required for 3NF. In fact, 2NF is the normal form specifically concerned with partial dependencies involving composite keys."
+        - answer: "To ensure that every field contains only one atomic value."
+          isCorrect: false
+          feedback: "Incorrect. Requiring fields to contain atomic values is a key requirement of 1NF, not 3NF."
+        - answer: "To ensure that every table contains only columns that are directly related to the primary key, including columns that depend on other non-key columns."
+          isCorrect: false
+          feedback: "Incorrect. A transitive dependency occurs when a non-primary-key column depends on another non-primary-key column. 3NF requires these dependencies to be removed."
+
