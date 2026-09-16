@@ -90,13 +90,15 @@
 
 ### Intro
 - [5.0.1 Intro Video ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.1_video_introduction_to_normalisation)
-- [5.0.2 Case Study Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.2_notes_case_study_happy_pizza)
+- [5.0.2 Case Study Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.2_bad_design_example_happy_pizza)
 - 
 ### Normalisation
-- [5.1.1 Normalisation ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.1_notes_normalisation)
-- [5.1.2 Normalising the Happy Pizza Database](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalising_the-happy_pizza_database)
-- [5.1.3 Exercise Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_exercise_normalisation)
-- [5.1.4 Solution Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.4_solution_normalisation)
+- [5.1.1 First Normal Form ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.1_notes_normalisation_1nf)
+- [5.1.2 Second Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalisation_2nf)
+- [5.1.3 Third Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_notes_normalisation_3nf.md)
+- [5.1.4 Normalisation and Database Design](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.4_notes_normalisation_and_design)
+- [5.1.5 Exercise Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.5_exercise_normalisation)
+- [5.1.6 Solution Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.6_solution_normalisation)
 
 ### Summary
 - [5.2.1 Weekly Summary](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.2_summary/5.2.1_weekly_summary)
