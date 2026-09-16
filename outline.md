@@ -85,3 +85,6 @@
 
 ### Summary
 - [Weekly Summary](https://mmantle-hud.github.io/githubpages/module_4_database_design/4.3_summary/4.3.1_weekly_summary)
+
+## 5 Normalisation
+### [5.0.2 Case Study Happy Pizza](module_5_normalisation/5.0_introduction/5.0.2_notes_case_study_happy_pizza.md)
