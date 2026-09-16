@@ -91,7 +91,7 @@
 ### Intro
 - [5.0.1 Intro Video ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.1_video_introduction_to_normalisation)
 - [5.0.2 Case Study Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.0_introduction/5.0.2_bad_design_example_happy_pizza)
-- 
+
 ### Normalisation
 - [5.1.1 First Normal Form ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.1_notes_normalisation_1nf)
 - [5.1.2 Second Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalisation_2nf)
