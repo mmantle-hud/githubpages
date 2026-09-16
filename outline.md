@@ -95,7 +95,7 @@
 ### Normalisation
 - [5.1.1 First Normal Form ](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.1_notes_normalisation_1nf)
 - [5.1.2 Second Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalisation_2nf)
-- [5.1.3 Third Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_notes_normalisation_3nf.md)
+- [5.1.3 Third Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_notes_normalisation_3nf)
 - [5.1.4 Normalisation and Database Design](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.4_notes_normalisation_and_design)
 - [5.1.5 Exercise Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.5_exercise_normalisation)
 - [5.1.6 Solution Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.6_solution_normalisation)
