@@ -1,0 +1,90 @@
+
+
+questions:
+  - questionId: subqueries_correlated_definition
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What makes a subquery a correlated subquery?"
+    options:
+      - answer: "It refers to columns from the outer query, so it must run once for each outer row."
+        isCorrect: true
+        feedback: "Correct! A correlated subquery depends on values from the outer query and is evaluated repeatedly."
+      - answer: "It always returns multiple rows that are used in an IN condition."
+        isCorrect: false
+        feedback: "Incorrect. Multi‑row subqueries are not necessarily correlated."
+      - answer: "It is written in the FROM clause instead of the WHERE clause."
+        isCorrect: false
+        feedback: "Incorrect. Subqueries in the FROM clause are derived tables, not correlated subqueries."
+      - answer: "It must return exactly one value to be used in a comparison."
+        isCorrect: false
+        feedback: "Incorrect. That describes a scalar subquery, not a correlated one."
+  - questionId: subqueries_scalar_vs_list
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement correctly describes the difference between a scalar subquery and an IN subquery?"
+    options:
+      - answer: "A scalar subquery returns a single value, while an IN subquery returns a list of values."
+        isCorrect: true
+        feedback: "Correct! Scalar subqueries return exactly one value, whereas IN subqueries return a set of values used for membership tests." 
+      - answer: "A scalar subquery always runs once per outer row, while an IN subquery always runs once total."
+        isCorrect: false
+        feedback: "Incorrect. Correlated subqueries run once per outer row, not scalar subqueries." 
+      - answer: "IN subqueries can only be used in SELECT clauses, while scalar subqueries can only be used in WHERE clauses."
+        isCorrect: false
+        feedback: "Incorrect. Both types can appear in multiple clauses depending on context." 
+      - answer: "Scalar subqueries return multiple rows, while IN subqueries return exactly one row."
+        isCorrect: false
+        feedback: "Incorrect. This reverses the definitions." 
+  - questionId: outer_joins_left_behavior
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the main effect of using a LEFT JOIN instead of an INNER JOIN?"
+    options:
+      - answer: "A LEFT JOIN keeps all rows from the left table, even when there is no matching row in the right table."
+        isCorrect: true
+        feedback: "Correct! LEFT JOIN returns all rows from the left side and fills unmatched right‑side columns with NULL."
+      - answer: "A LEFT JOIN only returns rows where both tables have matching values."
+        isCorrect: false
+        feedback: "Incorrect. That describes an INNER JOIN."
+      - answer: "A LEFT JOIN removes duplicate rows from the result set."
+        isCorrect: false
+        feedback: "Incorrect. JOIN type does not control duplicate removal."
+      - answer: "A LEFT JOIN sorts the results based on the join column."
+        isCorrect: false
+        feedback: "Incorrect. JOINs do not sort results unless ORDER BY is used."
+  - questionId: cte_basic_purpose
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is one of the main reasons for using a Common Table Expression (CTE) in SQL?"
+    options:
+      - answer: "To break a complex query into clearer, separate steps that are easier to read and maintain."
+        isCorrect: true
+        feedback: "Correct! CTEs help structure multi‑step logic and make queries more readable."
+      - answer: "To permanently store intermediate results for reuse in future queries."
+        isCorrect: false
+        feedback: "Incorrect. CTEs are temporary and only exist for the duration of the query."
+      - answer: "To guarantee faster performance than using joins or subqueries."
+        isCorrect: false
+        feedback: "Incorrect. CTEs improve readability, not performance."
+      - answer: "To automatically replace all subqueries in the SELECT and WHERE clauses."
+        isCorrect: false
+        feedback: "Incorrect. CTEs do not replace all subqueries; they are just one way to structure a query."
+  - questionId: derived_tables_from_clause
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the purpose of placing a subquery inside the FROM clause?"
+    options:
+      - answer: "It creates a temporary virtual table that the outer query can select from or aggregate."
+        isCorrect: true
+        feedback: "Correct! A subquery in the FROM clause becomes a derived table that the outer query can treat like any other table."
+      - answer: "It permanently stores intermediate results for later queries."
+        isCorrect: false
+        feedback: "Incorrect. Derived tables exist only for the duration of the query."
+      - answer: "It allows SQL to perform nested aggregations such as MAX(COUNT(...)) directly."
+        isCorrect: false
+        feedback: "Incorrect. SQL does not allow nested aggregates; derived tables help achieve this in two steps."
+      - answer: "It automatically improves query performance compared to using joins."
+        isCorrect: false
+        feedback: "Incorrect. Derived tables improve structure and readability, not performance."
+
+
