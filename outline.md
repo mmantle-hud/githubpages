@@ -110,7 +110,7 @@
   
 ### Subqueries
 - [Subqueries](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.1_subqueries/6.1.1_notes_subqueries)
-- [Subqueries Solutions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.1_subqueries/6.1.3_subqueries_solutions.md)
+- [Subqueries Solutions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.1_subqueries/6.1.3_subqueries_solutions)
 
 ### Outer Joins
 - [Outer Joins](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.2_outer_joins/6.2.1_notes_outer_joins)
