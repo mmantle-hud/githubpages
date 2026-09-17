@@ -121,4 +121,16 @@
 - [CTEs Solutions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.3_common_table_expressions/6.3.3_ctes_solutions)
 
 ### Weekly Summary
-[Weekly Summary](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.4_weekly_summary/6.4.1_weekly_summary)
+- [Weekly Summary](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.4_weekly_summary/6.4.1_weekly_summary)
+
+## Views, Indexes and Transactions
+
+### Views
+- [Views](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.1/7.1.1_notes_views)
+- [Views Solutions](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.1/7.1.3_views_solutions)
+
+### Indexes
+- [Indexes](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.2.1_notes_indexes)
+
+### Transactions
+- [Transactions](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.3.1_notes_transactions)

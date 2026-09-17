@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS demo_students;
 CREATE TABLE demo_students (
     student_id INT,
     given_name VARCHAR(255),
-    family_name VARCHAR(255)
+    family_name VARCHAR(255),
+    CONSTRAINT pk_demo_students PRIMARY KEY (student_id)
 );
 
 -- 2. Insert 499,999 filler rows
