@@ -1,0 +1,62 @@
+[
+  {
+    "student_id": 1,
+    "given_name": "Elizabeth",
+    "family_name": "Fong",
+    "final_score": "88.00"
+  },
+  {
+    "student_id": 2,
+    "given_name": "Patricia",
+    "family_name": "Selinger",
+    "final_score": "69.60"
+  },
+  {
+    "student_id": 3,
+    "given_name": "Donald",
+    "family_name": "Chamberlin",
+    "final_score": "60.40"
+  },
+  {
+    "student_id": 4,
+    "given_name": "Michael",
+    "family_name": "Stonebraker",
+    "final_score": "0"
+  },
+  {
+    "student_id": 5,
+    "given_name": "Tracy",
+    "family_name": "Chou",
+    "final_score": "89.60"
+  },
+  {
+    "student_id": 6,
+    "given_name": "Radia",
+    "family_name": "Perlman",
+    "final_score": "67.60"
+  },
+  {
+    "student_id": 7,
+    "given_name": "Tim",
+    "family_name": "Berners-Lee",
+    "final_score": "45.20"
+  },
+  {
+    "student_id": 8,
+    "given_name": "Brendan",
+    "family_name": "Eich",
+    "final_score": "81.60"
+  },
+  {
+    "student_id": 9,
+    "given_name": "Håkon Wium",
+    "family_name": "Lie",
+    "final_score": "32.40"
+  },
+  {
+    "student_id": 10,
+    "given_name": "Jen",
+    "family_name": "Simmons",
+    "final_score": "40.20"
+  }
+]

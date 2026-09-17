@@ -1,52 +1,23 @@
 [
   {
-    "given_name": "Tracy",
-    "family_name": "Chou",
-    "overall_score": "89.60"
+    "QUERY PLAN": "Index Scan using idx_demo_family_name on demo_students  (cost=0.42..4.44 rows=1 width=24) (actual time=0.141..0.146 rows=1 loops=1)"
   },
   {
-    "given_name": "Elizabeth",
-    "family_name": "Fong",
-    "overall_score": "88.00"
+    "QUERY PLAN": "  Index Cond: ((family_name)::text = 'Smith'::text)"
   },
   {
-    "given_name": "Brendan",
-    "family_name": "Eich",
-    "overall_score": "81.60"
+    "QUERY PLAN": "  Buffers: shared hit=1 read=3"
   },
   {
-    "given_name": "Patricia",
-    "family_name": "Selinger",
-    "overall_score": "69.60"
+    "QUERY PLAN": "Planning:"
   },
   {
-    "given_name": "Radia",
-    "family_name": "Perlman",
-    "overall_score": "67.60"
+    "QUERY PLAN": "  Buffers: shared hit=19 read=1"
   },
   {
-    "given_name": "Donald",
-    "family_name": "Chamberlin",
-    "overall_score": "60.40"
+    "QUERY PLAN": "Planning Time: 0.693 ms"
   },
   {
-    "given_name": "Tim",
-    "family_name": "Berners-Lee",
-    "overall_score": "45.20"
-  },
-  {
-    "given_name": "Jen",
-    "family_name": "Simmons",
-    "overall_score": "40.20"
-  },
-  {
-    "given_name": "Håkon Wium",
-    "family_name": "Lie",
-    "overall_score": "32.40"
-  },
-  {
-    "given_name": "Michael",
-    "family_name": "Stonebraker",
-    "overall_score": "0.00"
+    "QUERY PLAN": "Execution Time: 0.207 ms"
   }
 ]

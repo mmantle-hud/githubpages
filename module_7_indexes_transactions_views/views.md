@@ -1,0 +1,173 @@
+# Views
+
+A view is a `SELECT` statement that is saved inside the database under a specific name. 
+
+Let's look at an example. Last week we looked at selecting the student name and the overall course mark for all students in the database.
+
+
+```sql
+WITH assignment_scores AS (
+    SELECT
+        sas.student_id,
+        a.assessment_id,
+        ROUND(sas.score * a.assessment_weighting, 2) AS weighted_score
+    FROM
+        assessments AS a
+        INNER JOIN student_assessment_scores AS sas ON a.assessment_id = sas.assessment_id
+),
+overall_scores AS (
+    SELECT
+        student_id,
+        SUM(weighted_score) AS overall_score
+    FROM
+        assignment_scores
+    GROUP BY
+        student_id
+)
+SELECT
+    s.student_id,
+    s.given_name,
+    s.family_name,
+    COALESCE(os.overall_score, 0) AS final_score
+FROM
+    students AS s
+    LEFT JOIN overall_scores AS os ON s.student_id = os.student_id;
+```
+
+
+| student_id | given_name | family_name | final_score |
+|------------|------------|-------------|-------------|
+| 1          | Elizabeth  | Fong        | 88.00       |
+| 2          | Patricia   | Selinger    | 69.60       |
+| 3          | Donald     | Chamberlin  | 60.40       |
+| 4          | Michael    | Stonebraker | 0           |
+| 5          | Tracy      | Chou        | 89.60       |
+| 6          | Radia      | Perlman     | 67.60       |
+| 7          | Tim        | Berners-Lee | 45.20       |
+| 8          | Brendan    | Eich        | 81.60       |
+| 9          | Håkon Wium | Lie         | 32.40       |
+| 10         | Jen        | Simmons     | 40.20       |
+
+
+
+We might want to perform further actions on this data e.g. sort it, filter it, join it to another table, perform aggregations etc.
+
+If we do, our fairly complex query is going to get even more complex and even longer. 
+
+Instead of adding more complexity to this query, we can store the query as a view and then use it as a starting point for further actions. 
+
+```sql
+CREATE OR REPLACE VIEW student_overall_scores AS
+WITH assignment_scores AS (
+    SELECT
+        sas.student_id,
+        a.assessment_id,
+        ROUND(sas.score * a.assessment_weighting, 2) AS weighted_score
+    FROM
+        assessments AS a
+        INNER JOIN student_assessment_scores AS sas ON a.assessment_id = sas.assessment_id
+),
+overall_scores AS (
+    SELECT
+        student_id,
+        SUM(weighted_score) AS overall_score
+    FROM
+        assignment_scores
+    GROUP BY
+        student_id
+)
+SELECT
+    s.student_id,
+    s.given_name,
+    s.family_name,
+    COALESCE(os.overall_score, 0) AS final_score
+FROM
+    students AS s
+    LEFT JOIN overall_scores AS os ON s.student_id = os.student_id;
+```
+All we have done is add `CREATE OR REPLACE VIEW student_overall_scores AS` as the first line. This simply states the query that follows should be saved as a view (or replace an existing view with the same name). 
+
+I can then use the view exactly like a regular table e.g. find all the students that passed the course (i.e. score >= 40).
+```sql
+SELECT
+    given_name,
+    family_name,
+    final_score
+FROM
+    student_overall_scores
+WHERE
+    final_score >= 40
+ORDER BY
+    final_score DESC;
+```
+| given_name | family_name | final_score | 
+|------------|-------------|-------------| 
+| Tracy      | Chou        | 89.6        | 
+| Elizabeth  | Fong        | 88          | 
+| Brendan    | Eich        | 81.6        | 
+| Patricia   | Selinger    | 69.6        | 
+| Radia      | Perlman     | 67.6        | 
+| Donald     | Chamberlin  | 60.4        | 
+| Tim        | Berners-Lee | 45.2        | 
+| Jen        | Simmons     | 40.2        | 
+
+We can query `student_overall_scores` just like any other table.
+
+To find the overall average for each degree title. 
+
+```sql
+SELECT
+    d.degree_type,
+    d.degree_title,
+    ROUND(AVG(sos.final_score), 2) AS degree_average
+FROM
+    degrees AS d
+    INNER JOIN students AS s ON d.degree_id=s.degree_id
+    INNER JOIN student_overall_scores AS sos ON s.student_id = sos.student_id
+GROUP BY
+    d.degree_id,d.degree_type, d.degree_title;
+```
+
+| degree_type | degree_title          | degree_average | 
+|-------------|-----------------------|----------------| 
+| BSc         | Software Engineering  | 63.4           | 
+| MSc         | Computing             | 32.4           | 
+| BA          | Computing in Business | 30.2           | 
+| BSc         | Computing             | 65.8           | 
+| BSc         | Data Science          | 78.8           | 
+
+
+These queries are much easier to write because I already have the complex students' overall scores query stored as a view. 
+
+## When to Create a View
+There are two main reasons for creating a view
+
+1. **To reduce complexity**. This is exactly what we have just looked at. We store a complex query as a view and then use this as a starting point for further queries. 
+2. **For security**. We may have personal or sensitive data stored in our database e.g. dates of birth, medical records, credit card details. We may not want all database users to be able to access this data. To keep this data secure we create views that omit this sensitive data. Our database users can run queries using the view, and we don't have to worry about exposing personal or sensitive data.
+
+## Materialized Views
+
+By default, when we store a view, we store the `SELECT` statement, we don't store the result set. Every time we use the view in another query we execute the underlying SQL code of the view to retrieve up-to-date data. 
+
+Usually, this is exactly the behaviour we want. If we stored the actual data returned by a view it could quickly become inconsistent with the source data. e.g. if we update the student scores, these changes wouldn't be picked up by the view.  
+
+However, sometimes it can be advantageous to store the actual data and not the `SELECT` statement. We call this a **materialised view**. 
+
+Why would we want to create a materialised view? Materialised views provide performance benefits. Because the materialised view is physically stored on the disk like a plain table, we don't have to join tables or do complex operations. If we are dealing with large scale databases joining many large tables can take a long time. If we need our queries to execute instantly, using a materialised view can significantly speed up our `SELECT` statements.
+
+Furthermore, many queries look at data that changes infrequently, or where having up-to-the-second live data isn't necessary. For example, if we are storing student scores for a course that has finished, these scores won't change, and a materialised view would be fine to use.
+
+It is also possible to refresh materialised views. This can be done periodically to update the view with any changes. 
+
+Creating a materialised view is easy. We simply use the `materialized` keyword. 
+
+```sql
+CREATE MATERIALIZED VIEW mv_student_overall_scores AS
+WITH assignment_scores AS (
+    SELECT
+        sas.student_id,
+        a.assessment_id,
+        ...
+```
+
+<!--  
