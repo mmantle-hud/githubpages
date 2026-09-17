@@ -1,0 +1,63 @@
+
+-- 1) Find all the aircraft that aren't booked for any flights
+SELECT 
+    a.tail_number,
+    f.flight_id
+FROM aircraft AS a
+LEFT JOIN flights AS f ON a.tail_number = f.tail_number
+WHERE flight_id IS NULL;
+
+-- 2) Modify the previous query to get the full details of the aircraft, the model_name and manufacturer
+SELECT 
+    m.manufacturer,
+    m.model_name,
+    a.tail_number
+FROM aircraft_models AS m
+INNER JOIN aircraft AS a ON m.model_id = a.model_id
+LEFT JOIN flights AS f ON a.tail_number = f.tail_number
+WHERE flight_id IS NULL;
+
+-- 3) Find all the airports that don't have any routes assigned to them.
+SELECT 
+    a.iata_code,
+    a.name
+FROM 
+    airports AS a
+LEFT JOIN 
+    routes AS r ON a.iata_code = r.origin_airport
+WHERE r.route_id IS NULL;
+
+-- 4) Find all the airports that don't have any flights scheduled to depart. This is trickier, an airport might have routes assigned to them but no flights scheduled for the route. 
+SELECT 
+    a.iata_code,
+    a.name
+FROM 
+    airports AS a
+LEFT JOIN 
+    routes AS r ON a.iata_code = r.origin_airport
+LEFT JOIN
+    flights AS f ON r.route_id = f.route_id
+WHERE f.flight_id IS NULL;
+
+-- 5) Get the routes that have no flights scheduled on 2026-07-02. 
+-- You can filter a timestamp e.g. The following finds all flights scheduled to depart after 1st January 2026.
+
+-- SELECT 
+--     flights.flight_id
+-- FROM flights
+-- WHERE flights.departure >= '2026-01-01 00:00:00+00';
+
+SELECT 
+    r.route_id,
+    r.origin_airport,
+    r.destination_airport,
+    f.departure
+FROM 
+    routes AS r
+LEFT JOIN 
+    flights AS f 
+    ON r.route_id = f.route_id
+    AND f.departure >= '2026-07-02 00:00:00+00'
+    AND f.departure < '2026-07-03 00:00:00+00'
+WHERE 
+    f.flight_id IS NULL;

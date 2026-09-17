@@ -1,0 +1,52 @@
+[
+  {
+    "given_name": "Tracy",
+    "family_name": "Chou",
+    "overall_score": "89.60"
+  },
+  {
+    "given_name": "Elizabeth",
+    "family_name": "Fong",
+    "overall_score": "88.00"
+  },
+  {
+    "given_name": "Brendan",
+    "family_name": "Eich",
+    "overall_score": "81.60"
+  },
+  {
+    "given_name": "Patricia",
+    "family_name": "Selinger",
+    "overall_score": "69.60"
+  },
+  {
+    "given_name": "Radia",
+    "family_name": "Perlman",
+    "overall_score": "67.60"
+  },
+  {
+    "given_name": "Donald",
+    "family_name": "Chamberlin",
+    "overall_score": "60.40"
+  },
+  {
+    "given_name": "Tim",
+    "family_name": "Berners-Lee",
+    "overall_score": "45.20"
+  },
+  {
+    "given_name": "Jen",
+    "family_name": "Simmons",
+    "overall_score": "40.20"
+  },
+  {
+    "given_name": "Håkon Wium",
+    "family_name": "Lie",
+    "overall_score": "32.40"
+  },
+  {
+    "given_name": "Michael",
+    "family_name": "Stonebraker",
+    "overall_score": "0.00"
+  }
+]

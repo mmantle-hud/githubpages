@@ -102,3 +102,23 @@
 
 ### Summary
 - [5.2.1 Weekly Summary](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.2_summary/5.2.1_weekly_summary)
+
+## Subqueries, Outer Joins and CTEs
+### Intro
+- [Course Assessment Example](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.0_introduction/6.0.2_course_assessment_example)
+- [Flights Database Example](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.0_introduction/6.0.3_flights_example)
+  
+### Subqueries
+- [Subqueries](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.1_subqueries/6.1.1_notes_subqueries)
+- [Subqueries Solutions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.1_subqueries/6.1.3_subqueries_solutions.md)
+
+### Outer Joins
+- [Outer Joins](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.2_outer_joins/6.2.1_notes_outer_joins)
+- [Outer Joins Solutions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.2_outer_joins/6.2.3_outer_joins_solutions)
+
+### CTEs
+- [Common Table Expressions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.3_common_table_expressions/6.3.1_common_table_expressions)
+- [CTEs Solutions](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.3_common_table_expressions/6.3.3_ctes_solutions)
+
+### Weekly Summary
+[Weekly Summary](https://mmantle-hud.github.io/githubpages/module_6_joins_subqueries/6.4_weekly_summary/6.4.1_weekly_summary)

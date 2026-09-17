@@ -1,0 +1,32 @@
+[
+  {
+    "degree_type": "BSc",
+    "degree_title": "Data Science",
+    "student_counts": "2"
+  },
+  {
+    "degree_type": "BA",
+    "degree_title": "Computing in Business",
+    "student_counts": "2"
+  },
+  {
+    "degree_type": "BSc",
+    "degree_title": "Computing",
+    "student_counts": "3"
+  },
+  {
+    "degree_type": "BSc",
+    "degree_title": "Software Engineering",
+    "student_counts": "2"
+  },
+  {
+    "degree_type": "BSc",
+    "degree_title": "Information Technology",
+    "student_counts": "0"
+  },
+  {
+    "degree_type": "MSc",
+    "degree_title": "Computing",
+    "student_counts": "1"
+  }
+]
