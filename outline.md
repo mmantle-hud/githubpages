@@ -137,3 +137,7 @@
 
 ### Summary
 - [Summary](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.4.1_summary.md)
+
+## HTML and CSS
+### Intro to HTML
+- [Intro to HTML](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.1_intro_to_HTML/8.1.1_intro_to_HTML)
