@@ -141,3 +141,9 @@
 ## HTML and CSS
 ### Intro to HTML
 - [Intro to HTML](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.1_intro_to_HTML/8.1.1_intro_to_HTML)
+
+### Intro to CSS
+- [Intro to CSS](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.2_intro_to_CSS/8.2.1_intro_to_CSS)
+
+### Images and Links
+- [Images and Links](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.3_images_links/8.3.1_images_links)
