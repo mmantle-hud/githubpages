@@ -6,7 +6,7 @@ questions:
     shuffleOptions: true
     prompt: "What makes a subquery a correlated subquery?"
     options:
-      - answer: "It refers to columns from the outer query, so it must run once for each outer row."
+      - answer: "It refers to columns from the outer query, so it runs once for each outer row."
         isCorrect: true
         feedback: "Correct! A correlated subquery depends on values from the outer query and is evaluated repeatedly."
       - answer: "It always returns multiple rows that are used in an IN condition."
@@ -35,6 +35,23 @@ questions:
       - answer: "Scalar subqueries return multiple rows, while IN subqueries return exactly one row."
         isCorrect: false
         feedback: "Incorrect. This reverses the definitions." 
+  - questionId: exists_operator_purpose
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What does the EXISTS operator check for when used with a subquery?"
+    options:
+      - answer: "Whether the subquery returns at least one row, regardless of the actual values in that row."
+        isCorrect: true
+        feedback: "Correct! EXISTS evaluates to true if the subquery returns any rows at all, and false if it returns none — the specific values don't matter."
+      - answer: "Whether the subquery's result exactly matches a specific value in the outer query."
+        isCorrect: false
+        feedback: "Incorrect. Comparing to a specific value is what a scalar subquery with an operator like = or > does, not EXISTS."
+      - answer: "Whether the subquery returns a NULL value in any column."
+        isCorrect: false
+        feedback: "Incorrect. EXISTS is unrelated to checking for NULLs; it only checks whether any rows are returned."
+      - answer: "Whether the outer query and the subquery return the same number of rows."
+        isCorrect: false
+        feedback: "Incorrect. EXISTS doesn't compare row counts between the outer query and subquery — it only tests for the presence of at least one matching row per outer row."
   - questionId: outer_joins_left_behavior
     typeName: multipleChoice
     shuffleOptions: true
@@ -59,7 +76,7 @@ questions:
     options:
       - answer: "To break a complex query into clearer, separate steps that are easier to read and maintain."
         isCorrect: true
-        feedback: "Correct! CTEs help structure multi‑step logic and make queries more readable."
+        feedback: "Correct! CTEs help structure multi-step logic and make queries more readable."
       - answer: "To permanently store intermediate results for reuse in future queries."
         isCorrect: false
         feedback: "Incorrect. CTEs are temporary and only exist for the duration of the query."
@@ -86,5 +103,6 @@ questions:
       - answer: "It automatically improves query performance compared to using joins."
         isCorrect: false
         feedback: "Incorrect. Derived tables improve structure and readability, not performance."
+  
 
 
