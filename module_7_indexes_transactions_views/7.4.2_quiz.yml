@@ -1,0 +1,180 @@
+questions:
+  - questionId: index_purpose_and_btree
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the purpose of an index, and how does a B-tree index typically speed up a query compared to a full table scan?"
+    options:
+      - answer: "An index is a separate data structure that lets the RDBMS narrow down matching rows through a series of comparisons, rather than checking every row in the table."
+        isCorrect: true
+        feedback: "Correct! A B-tree index lets the database navigate from the root through progressively narrower ranges to find matching rows, avoiding the need to check every row like a full table scan does."
+      - answer: "An index physically reorders the rows in the table so that matching rows are always stored first."
+        isCorrect: false
+        feedback: "Incorrect. An index is a separate structure alongside the table with pointers to the full records; it doesn't reorder the table's rows."
+      - answer: "An index removes the need to store the actual data in the table, since the index holds all the column values instead."
+        isCorrect: false
+        feedback: "Incorrect. The table still stores the full data; the index leaf nodes store pointers to the full records, not a replacement for the table."
+      - answer: "An index guarantees that INSERT, UPDATE, and DELETE statements will run faster on the indexed table."
+        isCorrect: false
+        feedback: "Incorrect. Indexes speed up lookups, but INSERT, UPDATE, and DELETE actually become slower because the index has to be rearranged each time."
+
+  - questionId: index_disadvantages
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What are the main disadvantages of creating an index on a column?"
+    options:
+      - answer: "Extra disk space is needed to store the index, and the index must be rearranged whenever INSERT, UPDATE, or DELETE statements are run on the table."
+        isCorrect: true
+        feedback: "Correct! These are the two main trade-offs of indexes: additional storage overhead, and ongoing maintenance cost each time the underlying data changes."
+      - answer: "Indexes make SELECT queries run more slowly because the RDBMS has to search both the index and the table."
+        isCorrect: false
+        feedback: "Incorrect. Indexes are specifically designed to speed up SELECT queries that filter on the indexed column, not slow them down."
+      - answer: "Indexes prevent a column from being used in a WHERE clause."
+        isCorrect: false
+        feedback: "Incorrect. Indexing a column makes it more efficient to use in a WHERE clause, not less usable."
+      - answer: "Indexes cannot be created on foreign key columns."
+        isCorrect: false
+        feedback: "Incorrect. Foreign keys are actually recommended candidates for indexing, since this prevents full table scans during joins."
+
+  - questionId: when_to_avoid_indexes
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which of the following is a situation where creating an index is generally NOT recommended?"
+    options:
+      - answer: "A column with low cardinality, such as a Boolean flag showing whether a student has submitted an assessment."
+        isCorrect: true
+        feedback: "Correct! Low-cardinality columns have few distinct values, so an index provides little benefit for narrowing down results and isn't usually worth the maintenance overhead."
+      - answer: "A foreign key column that is frequently used to join tables together."
+        isCorrect: false
+        feedback: "Incorrect. Foreign keys should generally be indexed, as this helps prevent full table scans during joins."
+      - answer: "A column with high cardinality, such as email addresses, that is frequently used in a WHERE clause."
+        isCorrect: false
+        feedback: "Incorrect. High-cardinality columns used regularly in WHERE clauses are good candidates for indexing, not ones to avoid."
+      - answer: "A primary key column."
+        isCorrect: false
+        feedback: "Incorrect. Primary key columns are indexed automatically by the RDBMS, so this isn't a case to avoid indexing."
+
+  - questionId: view_definition_and_purpose
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is a database view, and what is one of the main reasons for creating one?"
+    options:
+      - answer: "A view is a SELECT statement saved under a name in the database, used to reduce query complexity or restrict access to sensitive data."
+        isCorrect: true
+        feedback: "Correct! A view stores a query so it can be reused as a starting point for further queries, and can also be used to hide sensitive columns from certain users."
+      - answer: "A view is a copy of a table's data that is stored separately and updated automatically whenever the original table changes."
+        isCorrect: false
+        feedback: "Incorrect. A regular view does not store data at all — it stores the SELECT statement, which is re-executed each time the view is used."
+      - answer: "A view is a temporary table that only exists for the duration of a single query and cannot be reused."
+        isCorrect: false
+        feedback: "Incorrect. This describes a CTE rather than a view; a view is a permanent database object that can be reused by many queries."
+      - answer: "A view is a type of index used to speed up SELECT statements on large tables."
+        isCorrect: false
+        feedback: "Incorrect. Regular views do not improve performance — they simply make queries easier to write, not faster."
+
+  - questionId: materialized_view_vs_regular_view
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "How does a materialized view differ from a regular view?"
+    options:
+      - answer: "A materialized view physically stores the query's result set on disk, whereas a regular view stores only the SELECT statement and re-executes it each time it's used."
+        isCorrect: true
+        feedback: "Correct! Because the data is physically stored, materialized views can offer performance benefits, but the stored data can become out of date until the view is refreshed."
+      - answer: "A materialized view always contains more up-to-date data than a regular view."
+        isCorrect: false
+        feedback: "Incorrect. It's the opposite: a regular view always reflects live data because it re-runs its query, while a materialized view can become outdated until it is refreshed."
+      - answer: "A materialized view can only be created using CREATE OR REPLACE VIEW, while a regular view requires the MATERIALIZED keyword."
+        isCorrect: false
+        feedback: "Incorrect. This has it backwards — a materialized view is created using the MATERIALIZED keyword, e.g. CREATE MATERIALIZED VIEW."
+      - answer: "A materialized view cannot be used in further SELECT statements, unlike a regular view."
+        isCorrect: false
+        feedback: "Incorrect. Both regular and materialized views can be queried like a table; materialized views are chosen for performance, not restricted usage."
+
+  - questionId: cte_vs_view_comparison
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "How do CTEs and views compare to each other?"
+    options:
+      - answer: "A CTE is a temporary, inline structure used within a single query, while a view is a permanent database object that can be reused by many queries."
+        isCorrect: true
+        feedback: "Correct! Both simplify complex queries, but a CTE only exists for the duration of the query it's defined in, whereas a view persists in the database for repeated use."
+      - answer: "A CTE and a view are stored identically in the database and can be used interchangeably in any query."
+        isCorrect: false
+        feedback: "Incorrect. A CTE is scoped to a single query and isn't saved as a database object, while a view is permanently stored and available to any future query."
+      - answer: "A view only exists for the duration of the query it's defined in, while a CTE is a permanent database object."
+        isCorrect: false
+        feedback: "Incorrect. This reverses the two: it's the CTE that is temporary and scoped to one query, while the view is the permanent object."
+      - answer: "CTEs are used exclusively for security purposes, while views are used exclusively to simplify queries."
+        isCorrect: false
+        feedback: "Incorrect. Views can be used both to reduce complexity and for security; CTEs are mainly used to structure and simplify a single complex query, not specifically for security."
+
+  - questionId: transaction_atomicity_definition
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What does 'atomicity' mean in the context of a database transaction?"
+    options:
+      - answer: "All SQL statements in the transaction are treated as an all-or-nothing package; if any statement fails, the entire transaction is rolled back."
+        isCorrect: true
+        feedback: "Correct! Atomicity guarantees that either every statement in the transaction succeeds and is saved, or none of them are, leaving the database unchanged."
+      - answer: "Each statement in the transaction is committed to the database as soon as it runs, independently of the others."
+        isCorrect: false
+        feedback: "Incorrect. This describes running statements without a transaction; atomicity specifically means the statements are saved together as a single unit, not individually."
+      - answer: "Multiple users can read the same data at the same time without blocking each other."
+        isCorrect: false
+        feedback: "Incorrect. This describes shared reads/locking behaviour, not atomicity."
+      - answer: "The transaction automatically retries failed statements until they succeed."
+        isCorrect: false
+        feedback: "Incorrect. A transaction does not retry failed statements; it rolls back all changes so the database is left unchanged."
+
+  - questionId: exclusive_lock_behaviour
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "By default, how do RDBMS locks handle UPDATE and DELETE statements on the same row?"
+    options:
+      - answer: "An exclusive lock is applied so only one user can UPDATE or DELETE a row at a time, and other users must wait until that action completes."
+        isCorrect: true
+        feedback: "Correct! Exclusive locks ensure edits to a row happen one at a time; other users wait until the current edit finishes before their own action runs."
+      - answer: "Multiple users can UPDATE or DELETE the same row at the same time, and the database automatically merges the changes."
+        isCorrect: false
+        feedback: "Incorrect. RDBMS do not merge concurrent edits automatically; only one user can edit a row at a time under an exclusive lock."
+      - answer: "UPDATE and DELETE statements are blocked entirely until all users have finished reading the row."
+        isCorrect: false
+        feedback: "Incorrect. Shared reads don't lock data, and readers and writers don't block each other — a user can still read a row while another user is editing it."
+      - answer: "Only SELECT statements are locked; UPDATE and DELETE can always run immediately regardless of other activity."
+        isCorrect: false
+        feedback: "Incorrect. It's the opposite: SELECT (reading) does not lock data, while UPDATE and DELETE require an exclusive lock."
+
+  - questionId: bank_transfer_without_transaction_problem
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "In the transactions reading we looked at a bank transfer example. In this example,what problem can occur if the two UPDATE statements are run separately (not inside a transaction) and a failure happens between them?"
+    options:
+      - answer: "Money can be deducted from one account without ever being deposited into the other, leaving the accounts inconsistent."
+        isCorrect: true
+        feedback: "Correct! If the first UPDATE succeeds but a failure occurs before the second UPDATE runs, the sender's balance is reduced but the recipient never receives the funds."
+      - answer: "Both UPDATE statements will automatically be rolled back even without a transaction being used."
+        isCorrect: false
+        feedback: "Incorrect. Automatic rollback on failure is exactly what a transaction provides; without one, a completed statement stays saved even if a later statement never runs."
+      - answer: "The database will refuse to run either UPDATE statement until both are wrapped in BEGIN and COMMIT."
+        isCorrect: false
+        feedback: "Incorrect. Statements can run individually outside a transaction; the risk is that a failure partway through leaves the changes inconsistent, not that the database refuses to run them."
+      - answer: "The two UPDATE statements will run simultaneously, causing a lock conflict on both accounts."
+        isCorrect: false
+        feedback: "Incorrect. The statements are run one after another, not simultaneously; the issue described is a failure occurring between the two statements."
+
+  - questionId: for_update_seat_locking
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "In the transactions reading we looked at a seat reservation example, in this example what was the purpose of adding FOR UPDATE to the SELECT statement within a transaction?"
+    options:
+      - answer: "It locks the selected row immediately, so another user's transaction must wait until the first transaction finishes before it can select the same row."
+        isCorrect: true
+        feedback: "Correct! FOR UPDATE locks the row as soon as it's read, preventing two users from both seeing the seat as available and both trying to reserve it."
+      - answer: "It permanently commits the SELECT statement's results to the database."
+        isCorrect: false
+        feedback: "Incorrect. SELECT statements retrieve data rather than commit changes; FOR UPDATE's role is to lock the row, not to commit anything."
+      - answer: "It allows multiple users to reserve the same seat simultaneously without conflict."
+        isCorrect: false
+        feedback: "Incorrect. FOR UPDATE is used to prevent this exact scenario by locking the row so only one user's transaction can proceed with reserving it at a time."
+      - answer: "It automatically rolls back the transaction if the seat is unavailable."
+        isCorrect: false
+        feedback: "Incorrect. FOR UPDATE only locks the row on read; the rollback happens because of separate application logic that checks if no rows were returned and issues ROLLBACK."
