@@ -1,0 +1,120 @@
+questions:
+  - questionId: understanding_html_elements
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes an HTML element?"
+    options:
+      - answer: "An HTML element usually consists of an opening tag, content, and a closing tag."
+        isCorrect: true
+        feedback: "Correct! An HTML element usually has an opening tag, content, and a closing tag, although some elements are void elements and do not have closing tags."
+      - answer: "An HTML element is only the opening tag used to give instructions to the browser."
+        isCorrect: false
+        feedback: "Incorrect. The opening tag is only one part of an HTML element. An element can also contain content and a closing tag."
+      - answer: "An HTML element is the text that the user sees in the browser."
+        isCorrect: false
+        feedback: "Incorrect. The visible text is the content of an element; the element itself includes the relevant tags as well."
+      - answer: "An HTML element is a CSS rule used to control the appearance of a webpage."
+        isCorrect: false
+        feedback: "Incorrect. HTML elements structure the content of a webpage, whereas CSS is used to control its presentation and styling."
+  - questionId: understanding_html_document_structure
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement correctly describes the purpose of the head and body elements in an HTML document?"
+    options:
+      - answer: "The head contains information about the document, while the body contains the content displayed on the webpage."
+        isCorrect: true
+        feedback: "Correct! The head contains information such as the title and metadata, while the body contains the content of the document that is displayed on the page."
+      - answer: "The head contains all visible webpage content, while the body contains metadata."
+        isCorrect: false
+        feedback: "Incorrect. This is the opposite of their main purposes. Visible page content belongs in the body, while document information and metadata belong in the head."
+      - answer: "The head is used for CSS only, while the body is used for JavaScript only."
+        isCorrect: false
+        feedback: "Incorrect. The head and body have broader purposes than simply containing CSS and JavaScript."
+      - answer: "The head and body are optional elements that can be used interchangeably."
+        isCorrect: false
+        feedback: "Incorrect. A well-structured HTML document uses the head and body to provide distinct parts of the document structure."
+  - questionId: understanding_css_rules
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which statement best describes the two main parts of a CSS rule?"
+    options:
+      - answer: "A selector identifies which HTML elements to style, and a declaration block specifies how they should be styled."
+        isCorrect: true
+        feedback: "Correct! The selector identifies the elements to style, while the declaration block contains property:value declarations that specify how those elements should look."
+      - answer: "A selector specifies the HTML content, and a declaration block creates new HTML elements."
+        isCorrect: false
+        feedback: "Incorrect. CSS does not create HTML elements. The selector identifies existing elements, while the declaration block specifies their presentation."
+      - answer: "A selector contains the property values, and a declaration block identifies which HTML elements should be styled."
+        isCorrect: false
+        feedback: "Incorrect. These roles are reversed. The selector identifies the elements, while the declaration block contains the styling declarations."
+      - answer: "A selector links an HTML document to a CSS file, and a declaration block contains the URL of the stylesheet."
+        isCorrect: false
+        feedback: "Incorrect. A selector and declaration block form a CSS rule. An HTML `<link>` element is used to connect an external stylesheet to an HTML document."
+  - questionId: understanding_external_css
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "How is an external CSS stylesheet connected to an HTML document?"
+    options:
+      - answer: "The CSS rules are placed in a .css file, which is linked from the HTML document using a `<link>` element in the `<head>`."
+        isCorrect: true
+        feedback: "Correct! An external stylesheet is stored in a .css file and connected to the HTML document using a `<link>` element, typically in the `<head>`."
+      - answer: "The CSS rules are placed inside the `<body>` element using a `<style>` element."
+        isCorrect: false
+        feedback: "Incorrect. This describes one way of using internal CSS, rather than an external stylesheet."
+      - answer: "The CSS rules are added directly to each HTML element using the class attribute."
+        isCorrect: false
+        feedback: "Incorrect. The class attribute can be used to identify elements for CSS selectors, but it does not contain the CSS rules themselves."
+      - answer: "The CSS file is placed inside the HTML document using a `<css>` element."
+        isCorrect: false
+        feedback: "Incorrect. There is no `<css>` element. External stylesheets are linked using the `<link>` element."
+  - questionId: understanding_css_box_model
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the difference between padding and margin in CSS?"
+    options:
+      - answer: "Padding is the space between an element's content and its border, while margin is the space around the outside of the element."
+        isCorrect: true
+        feedback: "Correct! Padding provides space between the content and border, while margin creates a gap between the element and surrounding elements."
+      - answer: "Padding creates a border around an element, while margin changes the colour of the element."
+        isCorrect: false
+        feedback: "Incorrect. Padding creates space inside the border, while margin creates space outside the element. Neither property creates a border or changes its colour."
+      - answer: "Padding is the space outside an element, while margin is the space between the content and border."
+        isCorrect: false
+        feedback: "Incorrect. These definitions are reversed. Padding is inside the border, while margin is outside the element."
+      - answer: "Padding and margin both refer to the space between the text and the browser window."
+        isCorrect: false
+        feedback: "Incorrect. Padding and margin describe different types of spacing around an individual HTML element."
+  - questionId: understanding_html_images
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the purpose of the alt attribute when using an `<img>` element?"
+    options:
+      - answer: "It provides alternative text describing the image, which can be used by users who cannot see the image."
+        isCorrect: true
+        feedback: "Correct! The alt attribute provides alternative text that describes the image and can be communicated to users who cannot see it, including screen-reader users."
+      - answer: "It specifies the location of the image file that the browser should load."
+        isCorrect: false
+        feedback: "Incorrect. The src attribute specifies the URL or location of the image file. The alt attribute provides alternative text."
+      - answer: "It changes the size and position of the image on the webpage."
+        isCorrect: false
+        feedback: "Incorrect. CSS is normally used to control the size, position, and presentation of an image."
+      - answer: "It provides a caption that is always displayed underneath the image."
+        isCorrect: false
+        feedback: "Incorrect. The alt attribute provides alternative text; it is not a visual caption that is automatically displayed underneath an image."
+  - questionId: understanding_screen_reader_accessibility
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Why is correctly structured HTML important for users who use screen readers?"
+    options:
+      - answer: "It helps screen readers understand and communicate the structure and content of the webpage."
+        isCorrect: true
+        feedback: "Correct! Screen readers benefit from correctly structured pages because the structure helps them communicate the organisation and content of the webpage."
+      - answer: "It ensures that the webpage will only be displayed as text rather than images."
+        isCorrect: false
+        feedback: "Incorrect. Screen readers do not require webpages to contain only text. Correct HTML structure helps them interpret the content and its organisation."
+      - answer: "It prevents the browser from displaying HTML elements that contain errors."
+        isCorrect: false
+        feedback: "Incorrect. Browsers are often able to display pages containing malformed HTML. Correct structure is important because it helps browsers and assistive technologies interpret the document appropriately."
+      - answer: "It automatically converts all webpage content into audio."
+        isCorrect: false
+        feedback: "Incorrect. A screen reader is the software that communicates webpage content to the user. Correctly structured HTML helps the screen reader interpret that content."
