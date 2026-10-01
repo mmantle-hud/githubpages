@@ -138,7 +138,7 @@
 
 ### Transactions
 - [Transactions](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.3.1_notes_transactions)
-
+- [ACID Principles](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.3.2_acid)
 ### Summary
 - [Summary](https://mmantle-hud.github.io/githubpages/module_7_indexes_transactions_views/7.4.1_summary.md)
 
