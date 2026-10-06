@@ -1,6 +1,6 @@
-# CIS7203 Assignment 1 Database Design Report Brief
+# CIS7203 Assignment 1 Database Design Report
 
-- [CIS7203 Assignment 1 Database Design Report Brief](#cis7203-assignment-1-database-design-report-brief)
+- [CIS7203 Assignment 1 Database Design Report](#cis7203-assignment-1-database-design-report)
   - [General Information](#general-information)
   - [Arrangements for the Return of Work and Feedback](#arrangements-for-the-return-of-work-and-feedback)
   - [Assignment Specific Resources](#assignment-specific-resources)
