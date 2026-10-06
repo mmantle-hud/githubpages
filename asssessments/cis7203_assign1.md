@@ -18,6 +18,7 @@
 
 
 ## General Information
+
 |                          |                                      |
 | :----------------------- | :----------------------------------- |
 | Module Code              | CIS7203                              |
@@ -50,11 +51,13 @@
 | Equipment | N/A|
 
 ## Guidance on AI Usage
+
 **Level 1 - Not Permitted**
 
 If the use of AI is suspected, learners may be required to attend an interview with course tutors to demonstrate their understanding of the work they have submitted.
 
 ## General Study Guidance
+
 - Cite all information used in your work which is clearly from a source. Try to ensure that all sources in your reference list are seen as citations in your work, and all names cited in the work appear in your reference list. 
 - Reference and cite your work in accordance with the APA 7th system - the University's chosen referencing style.  For specific advice, you can talk to your subject librarians or go to the library help desk, or you can access library guidance via the following link: APA 7th Referencing Guide.
 - The University has regulations relating to Academic misconduct, including plagiarism. The Academic Skills Team can advise and help you with how to avoid 'poor scholarship' and potential academic misconduct.  
@@ -63,15 +66,19 @@ If the use of AI is suspected, learners may be required to attend an interview w
 - Do not exceed the word limit/time/other limit. 
 
 ## Exceptional Circumstances
+
 If you wish to make an EC claim against this module, you can access details on the procedure for claiming ECs, on the Registry website - **https://www.hud.ac.uk/registry/current-students/taughtstudents/considerationofpersonalcircumstances/**.
 
 ## Extensions/Late Submission
+
 If you wish to submit an extension on this module, you can access details on the procedure for submitting extensions here - **https://students.hud.ac.uk/studies/registry/extensions/extensionsfortaughtstudents/**.
 
 ## Support and Guidance
+
 General help, support and guidance information for your course and time at University can be found at **https://students.hud.ac.uk/help/** or you can speak to your module leader or Personal Academic Tutor for School based support.
 
 ## Regulations
+
 The regulations governing assessments can be found here: **https://www.hud.ac.uk/policies/registry/awards-taught/section-5/**
 
 ## Assessment Tasks
@@ -79,6 +86,7 @@ The regulations governing assessments can be found here: **https://www.hud.ac.uk
 You are required to produce a report demonstrating knowledge of database design using the relational model.
 
 ### The Scenario
+
 A conservation charity runs a project to track cheetah populations in the Serengeti National Park. Researchers conduct surveys by driving off-road vehicles through the park where they record cheetah sightings, track prey movements, and map threats from competitor species such as lions and hyenas. 
 
 You have been asked to design a relational database system that will effectively record survey results and support conservation analysis.
@@ -93,6 +101,7 @@ Here are the key requirements:-
 
 
 ### The Database Design Report (1200 Words)
+
 You are required to document your database design in a database design report. 
 
 Content requirements:
@@ -112,6 +121,7 @@ Basic presentation requirements:
 - Figures and tables should be numbered and captioned.
 
 #### The word count
+
 - You must stay within 10% of the word count i.e. no more than 1320 words. 
 - The diagrams and data dictionary do not contribute towards the word count. 
 - The word count for the document should be clearly presented at the end of the document. 
