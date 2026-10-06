@@ -67,19 +67,19 @@ If the use of AI is suspected, learners may be required to attend an interview w
 
 ## Exceptional Circumstances
 
-If you wish to make an EC claim against this module, you can access details on the procedure for claiming ECs, on the Registry website - **https://www.hud.ac.uk/registry/current-students/taughtstudents/considerationofpersonalcircumstances/**.
+If you wish to make an EC claim against this module, you can access details on the procedure for claiming ECs, on the Registry website - [**https://www.hud.ac.uk/registry/current-students/taughtstudents/considerationofpersonalcircumstances/**](https://www.hud.ac.uk/registry/current-students/taughtstudents/considerationofpersonalcircumstances/).
 
 ## Extensions/Late Submission
 
-If you wish to submit an extension on this module, you can access details on the procedure for submitting extensions here - **https://students.hud.ac.uk/studies/registry/extensions/extensionsfortaughtstudents/**.
+If you wish to submit an extension on this module, you can access details on the procedure for submitting extensions here - [**https://students.hud.ac.uk/studies/registry/extensions/extensionsfortaughtstudents/**](https://students.hud.ac.uk/studies/registry/extensions/extensionsfortaughtstudents/).
 
 ## Support and Guidance
 
-General help, support and guidance information for your course and time at University can be found at **https://students.hud.ac.uk/help/** or you can speak to your module leader or Personal Academic Tutor for School based support.
+General help, support and guidance information for your course and time at University can be found at [**https://students.hud.ac.uk/help/**](https://students.hud.ac.uk/help/) or you can speak to your module leader or Personal Academic Tutor for School based support.
 
 ## Regulations
 
-The regulations governing assessments can be found here: **https://www.hud.ac.uk/policies/registry/awards-taught/section-5/**
+The regulations governing assessments can be found here: [**https://www.hud.ac.uk/policies/registry/awards-taught/section-5/**](https://www.hud.ac.uk/policies/registry/awards-taught/section-5/)
 
 ## Assessment Tasks
 
@@ -106,10 +106,11 @@ You are required to document your database design in a database design report.
 
 Content requirements:
 - A Conceptual Model: A high-level entity-relationship diagram showing your proposed entities, attributes, and relationship cardinalities.
-- A Logical Model: A normalized database schema (up to 3NF) identifying all tables, columns, primary keys and foreign keys and relational data types. 
-- A data dictionary for the logical model, documenting each table and column, including data types, key constraints, nullability and appropriate validation or domain constraints
+- A Logical Model: A normalised database design (up to 3NF) identifying all tables, columns, primary keys and foreign keys and relational data types. 
+- A data dictionary for the logical model, documenting each table and column, including data types, key constraints, nullability and appropriate validation constraints.
 - Each of the above should be accompanied by analysis. This should explain decisions made in your design and demonstrate your understanding of key relational database design concepts and best practices. 
 - Based on the above description, you may assume some additional attributes that aren't explicitly mentioned. Any significant assumptions should be clearly stated and justified. However, don't be tempted to expand the scenario beyond the provided description. As rough guide, your initial conceptual model should feature no more than ten entities. 
+- Although your proposed design should be normalised, you do **not** have to show the normlaisation process step by step. 
 
 Basic presentation requirements:
 - Diagrams should be presented using Crow's Foot Notation.
@@ -128,7 +129,7 @@ Basic presentation requirements:
 
 ## Marking Criteria
 
-|                   |                    |            |
+|      Score        |  Grade             |  Description          |
 | :---------------- | :----------------- |:-----------|
 | 80 and above      |**Outstanding work (A+)** Demonstrating comprehensive mastery knowledge, understanding and extensive critical appreciation of the subject area.| The proposed design is exceptionally clear, accurate and well justified, addressing all requirements of the scenario. The conceptual model, logical model and data dictionary are comprehensive and internally consistent. Analysis demonstrates excellent understanding of relational modelling, keys, relationships, constraints and appropriate design decisions. Goes beyond the standard expected for an A grade through exceptional depth, precision and critical insight. |
 | 70-79	|**Excellent work (A)** Demonstrating mastery of knowledge, understanding and critical appreciation of the subject area	| The proposed design comprehensively addresses the scenario requirements and is accurate, appropriate and clearly presented. The conceptual model, logical model and data dictionary are detailed and consistent, with only minor areas for improvement. Detailed analysis clearly explains and justifies design decisions and demonstrates strong understanding of relational database design principles.  |
