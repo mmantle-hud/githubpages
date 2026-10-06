@@ -41,7 +41,7 @@
 | Submission Date   | Friday 30th October 2026 |
 | Feedback Date     | Friday 20th November 2026 |
 | Submission Time   | 12:00 Noon         |
-| Submission Method | Upload a .pdf or Word doc to to Coursera to **Submission Point for Assessment 1: The Database Design Report**  |
+| Submission Method | Upload a .pdf or Word document to Coursera: **Submission Point for Assessment 1: The Database Design Report**  |
 
 ## Assignment Specific Resources
 
