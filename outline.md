@@ -1,4 +1,8 @@
 # Module Outline: CIS7523 Relational Database and Web Integration
+
+## Assessments
+- [Assignment 1](https://mmantle-hud.github.io/githubpages/asssessments/cis7203_assign1)
+
 ## Module 1 Introduction
 
 ### Introduction 
