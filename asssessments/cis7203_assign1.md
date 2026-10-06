@@ -110,7 +110,7 @@ Content requirements:
 - A data dictionary for the logical model, documenting each table and column, including data types, key constraints, nullability and appropriate validation constraints.
 - Each of the above should be accompanied by analysis. This should explain decisions made in your design and demonstrate your understanding of key relational database design concepts and best practices. 
 - Based on the above description, you may assume some additional attributes that aren't explicitly mentioned. Any significant assumptions should be clearly stated and justified. However, don't be tempted to expand the scenario beyond the provided description. As rough guide, your initial conceptual model should feature no more than ten entities. 
-- Although your proposed design should be normalised, you do **not** have to show the normlaisation process step by step. 
+- Although your proposed design should be normalised, you do **not** have to show the normalisation process step by step. 
 
 Basic presentation requirements:
 - Diagrams should be presented using Crow's Foot Notation.
