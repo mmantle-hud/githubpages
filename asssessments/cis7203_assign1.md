@@ -1,6 +1,6 @@
-# CIS7203 Relational Databases and Web Integration - Assignment 1 Brief
+# CIS7203 Assignment 1 Database Design Report Brief
 
-- [CIS7203 Relational Databases and Web Integration - Assignment 1 Brief](#cis7203-relational-databases-and-web-integration---assignment-1-brief)
+- [CIS7203 Assignment 1 Database Design Report Brief](#cis7203-assignment-1-database-design-report-brief)
   - [General Information](#general-information)
   - [Arrangements for the Return of Work and Feedback](#arrangements-for-the-return-of-work-and-feedback)
   - [Assignment Specific Resources](#assignment-specific-resources)
