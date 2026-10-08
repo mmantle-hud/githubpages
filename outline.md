@@ -104,7 +104,7 @@
 - [Second Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalisation_2nf)
 - [Third Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_notes_normalisation_3nf)
 - [Normalisation and Database Design](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.4_notes_normalisation_and_design)
-- [Normalising Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalising_the-happy_pizza_database.md)
+- [Normalising Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalising_the-happy_pizza_database)
 - [Exercise Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.5_exercise_normalisation)
 - [Solution Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.6_solution_normalisation)
 
