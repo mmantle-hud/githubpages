@@ -1,22 +1,112 @@
-# Types of NoSQL database
+# NoSQL databases
 
-"NoSQL" is an umbrella term, not a single technology. The databases under it use very different data models, and most of them fall into four main families.
+"NoSQL" is an umbrella term, not a single technology. 
 
-## 1. Key-value stores
+The databases under it use very different data models.
 
-**How data is stored:** A giant dictionary. Each item is a unique **key** pointing to a **value**, and the database doesn't look inside the value.
+The following describes some of the most widely used types. 
 
-**Examples:** Redis, Amazon DynamoDB, Memcached
+## Key-value stores
 
-**Strengths:** Extremely fast and simple, and they scale easily because each lookup only needs the key.
+Data is stored in a simple way as keys and values.
 
-**Weaknesses:** You can only find data by its key. Querying by the contents of a value, or joining data, is limited or impossible.
+Here's an example:
 
-**Typical uses:** Caching, user sessions, shopping baskets, leaderboards.
 
-*Example:* `session:8f3a2` → the logged-in user's session data.
+```
+user123
+{
+  "given_name": "Edgar",
+  "last_name": "Codd",
+  "degree": "Computing",
+  "score": 92
+}
+user124
+{
+  "given_name": "Elizabeth",
+  "last_name": "Fong",
+  "degree": "Data Science",
+  "score": 67
+}
 
-## 2. Document databases
+```
+
+The keys (e.g. `user123`,`user124`) are unique. The values can be strictured in many different ways. 
+
+Key-value stores are designed to be queryed using the key. Complex queries based on the contents of the value, joins and aggregations are generally not possible or limited.
+
+The advantage of key-value stores is they are extremely fast and they easily scale horizontally. We can distribute many records over several machines and it is fast to lookups records using the key. 
+
+If we have a dataset that we always want to query in the same way, key-value stores can be a good fit. 
+
+An example key-value store is Redis. 
+
+
+
+## Document databases
+
+A document database stores data as a document e.g.
+
+```
+ {
+    "_id": 123,
+    "given_name": "Edgar",
+    "last_name": "Codd",
+    "degree": "Computing",
+    "score": 92
+  }
+```
+This data has a key-value structure e.g. given_name, last_name, degree are keys and "Edgar", "Codd" and "Computing" are values. We can think of a document as being like a relational database row.  
+
+We can then gather a number of documents together into a collection. 
+
+```
+[
+  {
+    "_id": 123,
+    "given_name": "Edgar",
+    "last_name": "Codd",
+    "degree": "Computing",
+    "score": 92
+  },
+  {
+    "_id": 124,
+    "given_name": "Elizabeth",
+    "last_name": "Fong",
+    "degree": "Data Science",
+    "score": 67,
+    "course_rep": true
+  },
+  {
+    "_id": 125,
+    "given_name": "Michael",
+    "last_name": "Stonebraker",
+    "degree": "Computing",
+    "score": 84
+  }
+]
+```
+
+We can think of a collection as being like a relational database table. 
+
+Unlike key-value stores we can query in more flexible ways e.g. find all the Computing students. 
+
+```
+db.students.find({
+    degree: "Computing"
+})
+```
+
+Unlike the relational model, documents in the same collection can have different fields e.g. the second document has a "course_rep" field. We call this a flexible schema or schema-less design. 
+
+Again, document databases are simpler than the relational model. For example, we don't have traditional foreign keys, and relationships between data are often handled differently from relational databases. Data is often duplicated in different documents, so that all of the data needed by an application can be retrieved from a single document. This can result in inconsistencies.  
+
+
+
+However, like key-value stores, the simplicity of document databases mean they scale effectively. They can also be easier for programmers to work with as all the data for a particular object is neatly wrapped up in a single document. There isn't any need to do complex joins.  
+
+The most famous document database is probably MongoDB. 
+
 
 **How data is stored:** As self-contained **documents**, usually JSON-like, grouped into collections. Each document can have its own structure, and documents can contain nested data.
 
