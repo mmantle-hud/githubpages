@@ -1,6 +1,6 @@
-# CIS7203 Assignment 1 Database Design Report
+# CIS7203 Assignment 1: Database Design Report
 
-- [CIS7203 Assignment 1 Database Design Report](#cis7203-assignment-1-database-design-report)
+- [CIS7203 Assignment 1: Database Design Report](#cis7203-assignment-1-database-design-report)
   - [General Information](#general-information)
   - [Arrangements for the Return of Work and Feedback](#arrangements-for-the-return-of-work-and-feedback)
   - [Assignment Specific Resources](#assignment-specific-resources)
@@ -14,7 +14,9 @@
     - [The Scenario](#the-scenario)
     - [The Database Design Report (1200 Words)](#the-database-design-report-1200-words)
       - [The word count](#the-word-count)
-  - [Marking Criteria](#marking-criteria)
+  - [Assessment Criteria and Grade Indicators](#assessment-criteria-and-grade-indicators)
+    - [Assessment Criteria](#assessment-criteria)
+    - [Grade Indicators](#grade-indicators)
 
 
 ## General Information
@@ -127,7 +129,23 @@ Basic presentation requirements:
 - The diagrams and data dictionary do not contribute towards the word count. 
 - The word count for the document should be clearly presented at the end of the document. 
 
-## Marking Criteria
+## Assessment Criteria and Grade Indicators
+
+
+### Assessment Criteria
+
+
+| Assessment Component | Marks | What is being assessed |
+| :-------------------- | :----: | :--------------------- |
+| **Conceptual Model** | **20** | Appropriate identification of entities and attributes, relationships, cardinality and optionality. Correct use of Crow's Foot notation. Overall suitability for the scenario. |
+| **Logical Model** | **20** | Translation of the conceptual model into relational tables. Correct use of primary and foreign keys, resolution of many-to-many relationships, appropriate relational data types. Normalisation to 3NF. Overall correctness and consistency. |
+| **Data Dictionary** | **20** | Complete documentation of tables and columns; data types; primary and foreign key constraints; nullability; appropriate validation constraints; consistency with the logical model. |
+| **Analysis and Justification** | **20** | Explanation and justification of design decisions. Application of relational database design principles. Understanding of relationships, keys, constraints and normalisation. Identification and justification of appropriate assumptions. |
+| **Presentation and Professionalism** | **20** | Clear and professional communication of the proposed database design. Organisation and readability of the report. Clarity and legibility of diagrams, tables and other supporting material. Adherence to the specified presentation requirements. |
+| **Total** | **100** | |
+
+
+### Grade Indicators
 
 |      Score        |  Grade             |  Description          |
 | :---------------- | :----------------- |:-----------|
