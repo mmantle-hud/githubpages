@@ -104,7 +104,7 @@
 - [Second Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalisation_2nf)
 - [Third Normal Form](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.3_notes_normalisation_3nf)
 - [Normalisation and Database Design](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.4_notes_normalisation_and_design)
-- [Normalising Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalising_the-happy_pizza_database.md)
+- [Normalising Happy Pizza](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.2_notes_normalising_the-happy_pizza_database)
 - [Exercise Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.5_exercise_normalisation)
 - [Solution Normalising the Community College Courses Databases](https://mmantle-hud.github.io/githubpages/module_5_normalisation/5.1_normalisation/5.1.6_solution_normalisation)
 
@@ -151,12 +151,15 @@
 
 ### Intro to HTML
 - [Intro to HTML](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.1_intro_to_HTML/8.1.1_intro_to_HTML)
+- [HTML Lab Solutions](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.1_intro_to_HTML/8.1.3_intro-to_HTML_solution)
 
 ### Intro to CSS
 - [Intro to CSS](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.2_intro_to_CSS/8.2.1_intro_to_CSS)
+- [CSS Lab Solutions](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.2_intro_to_CSS/8.2.3_intro_to_CSS_solutions)
 
 ### Images and Links
 - [Images and Links](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.3_images_links/8.3.1_images_links)
+- [IMages and Links Solutions](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.3_images_links/8.3.3_images_links_solutions)
 
 ### Best Practices
 - [Best Practices](https://mmantle-hud.github.io/githubpages/module_8_intro_to_web/8.4_accessibility/8.4.1_accessibility_notes)
