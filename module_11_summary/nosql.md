@@ -2,7 +2,7 @@
 
 # 
 
-From the 1980s up to the 2000s relational database dominated. 
+From the 1980s up to the 2000s relational databases dominated. 
 
 If a person used the phrase 'database', they almost always meant a relational database. 
 
@@ -14,9 +14,7 @@ In the 2000s companies such as Google, Amazon and Facebook were dealing with vol
 
 At the time, relational databases struggled to deal with the vast amounts of data. 
 
-Previously, if there was a requirement to store more data in a relational database, we would invest in a computer with more storage and bigger memory. 
-
-We describe this as scaling **vertically**. 
+Previously, if there was a requirement to store more data in a relational database, we would invest in a computer with more storage and bigger memory. We describe this as scaling **vertically**. 
 
 There are two problems with vertical scaling. The first is cost, machines with huge amounts of memory and storage are very expensive. The second is we can't keep scaling vertically forever.  There is a limit to how much data a single computer can store and handle. 
 
@@ -26,7 +24,7 @@ Instead, companies started scaling **horizontally**. They spread the data across
 
 The problem with horizontal scaling is operations such as joins are difficult to make fast when data is spread across multiple machines. Furthermore, it is difficult to enforce ACID transactions. 
 
-Companies such as Amazon and Google were happy to relax ACID guarentees 
+Companies such as Amazon and Google were happy to relax ACID guarentees for speed
 
 
 
