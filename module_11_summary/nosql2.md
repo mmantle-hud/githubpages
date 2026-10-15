@@ -1,10 +1,8 @@
 # NoSQL databases
 
-"NoSQL" is an umbrella term, not a single technology. 
+"NoSQL" is not a specific type of database. Instead it is an umbrella term, used to describe types of database that differ from the relational model we have learnt about. 
 
-The databases under it use very different data models.
-
-The following describes some of the most widely used types. 
+The following describes some of the most widely used types on NoSQL databases. 
 
 ## Key-value stores
 
@@ -31,21 +29,25 @@ user124
 
 ```
 
-The keys (e.g. `user123`,`user124`) are unique. The values can be strictured in many different ways. 
+The keys (e.g. `user123`,`user124`) are unique. 
 
-Key-value stores are designed to be queryed using the key. Complex queries based on the contents of the value, joins and aggregations are generally not possible or limited.
+The values e.g. `"given_name": "Edgar"` can be structured in many different ways. In this example, they are structured like a dictionary. 
 
-The advantage of key-value stores is they are extremely fast and they easily scale horizontally. We can distribute many records over several machines and it is fast to lookups records using the key. 
+Key-value stores are designed to be queryed using the key. 
 
-If we have a dataset that we always want to query in the same way, key-value stores can be a good fit. 
+The advantage of key-value stores is they are extremely fast and they easily scale horizontally. We can distribute many records over several machines and it is fast to lookup records using the key. 
 
-An example key-value store is Redis. 
+The disadvantage is that complex queries based on the contents of the value, joins and aggregations are generally not possible or limited. 
 
+However, if we have a dataset that we always want to query in the same way e.g. customer records that we always query using a customer ID, key-value stores can be a good fit. 
 
+An example of a key-value store is Redis. 
 
 ## Document databases
 
-A document database stores data as a document e.g.
+A document database stores data as self-contained documents, typically represented using a JSON-like structure.
+
+Here's an example:
 
 ```
  {
@@ -56,7 +58,10 @@ A document database stores data as a document e.g.
     "score": 92
   }
 ```
-This data has a key-value structure e.g. given_name, last_name, degree are keys and "Edgar", "Codd" and "Computing" are values. We can think of a document as being like a relational database row.  
+
+This data has a key-value structure e.g. `given_name`, `last_name`, `degree` are keys and "Edgar", "Codd" and "Computing" are values. We can think of a document as being like a relational database row.  
+
+However, a document can contain nested structures and arrays, making it more flexible than a typical relational row.
 
 We can then gather a number of documents together into a collection. 
 
@@ -89,7 +94,7 @@ We can then gather a number of documents together into a collection.
 
 We can think of a collection as being like a relational database table. 
 
-Unlike key-value stores we can query in more flexible ways e.g. find all the Computing students. 
+Unlike key-value stores we can query in more flexible ways, using the contents of a document. For example, to find all the Computing students:
 
 ```
 db.students.find({
@@ -97,73 +102,90 @@ db.students.find({
 })
 ```
 
-Unlike the relational model, documents in the same collection can have different fields e.g. the second document has a "course_rep" field. We call this a flexible schema or schema-less design. 
+Unlike the relational model, documents in the same collection can have different fields e.g. the second document has a `course_rep` field. 
 
-Again, document databases are simpler than the relational model. For example, we don't have traditional foreign keys, and relationships between data are often handled differently from relational databases. Data is often duplicated in different documents, so that all of the data needed by an application can be retrieved from a single document. This can result in inconsistencies.  
+We call this a flexible schema or schema-less design. Developers often still aim for consistency between documents, but the database does not enforce it in the same way as a relational database.
+
+Document databases are simpler than the relational model. For example, we don't have traditional constraints. Foreign keys and relationships between data are handled differently from relational databases. 
+
+Data is often duplicated in different documents. This offers the advantage that all of the data needed by an application can be retrieved from a single document, but this can also result in inconsistencies.  
+
+The advantage of document databases, like key-value stores, is that their simpler data model can make it easier to scale across multiple machines. We can distribute collections over several different machines. They can also be easier for programmers to work with as all the data for a particular object is neatly wrapped up in a single document, and there less need to do complex joins.  
+
+A widely used document database is MongoDB. 
+
+
+## Graph Databases
+
+A graph database stores data as nodes and relationships.
+
+We can think of a node as being similar to an entity in the relational model. Nodes can contain properties e.g.
+
+```
+{
+  "student_id": 123,
+  "given_name": "Edgar",
+  "last_name": "Codd"
+}
+```
+
+Relationships represent how those things are connected. Again, they can also contain properties e.g.
+
+```
+{
+  "relationship": "studies",
+  "start_year": 2025
+}
+```
 
 
 
-However, like key-value stores, the simplicity of document databases mean they scale effectively. They can also be easier for programmers to work with as all the data for a particular object is neatly wrapped up in a single document. There isn't any need to do complex joins.  
 
-The most famous document database is probably MongoDB. 
+Here's an example:
+
+<pre class="mermaid">
+flowchart LR
+
+    Edgar(("123 (Edgar Codd)"))
+    Elizabeth(("124 (Elizabeth Fong)"))
+    Michael(("125 (Michael Stonebraker)"))
+
+    Computing(("Computing"))
+    DataScience(("Data Science"))
+
+    Edgar -->|studies| Computing
+    Elizabeth -->|studies| DataScience
+    Michael -->|studies| Computing
+
+    Edgar -->|friends_with| Michael
+</pre>
 
 
-**How data is stored:** As self-contained **documents**, usually JSON-like, grouped into collections. Each document can have its own structure, and documents can contain nested data.
 
-**Examples:** MongoDB, CouchDB, Firestore
+Unlike relational databases, relationships are stored directly within the database rather than being reconstructed using foreign keys and joins.
 
-**Strengths:** Flexible schema, and data that is used together is stored together, which matches how programmers work with objects. You can query by fields inside the document.
 
-**Weaknesses:** Relationships between documents are harder to handle than with joins, and data is often duplicated (denormalised), which can lead to inconsistencies.
+A graph database might store the data like the following:
 
-**Typical uses:** Product catalogues, user profiles, content management, apps where the data shape changes often.
+```
+(123 Edgar Codd)-studies-(Computing)
+(124 Elizabeth Fong)-studies-(Data Science)
+(125 Michael Stonebraker)-studies-(Computing)
+(123 Edgar Codd)-friends_with-(125 Michael Stonebraker)
+```
 
-*Example:* One order stored as a single document containing the customer details and a list of items.
+We can ask questions such as:
 
-## 3. Wide-column stores
+- Who are Edgar Codd's friends?
+- Which students study Computing?
+- Which friends of Edgar study Computing?
 
-**How data is stored:** In tables of rows and columns, but unlike relational tables, each row can have different columns, and data is organised for fast reads and writes across many servers.
+In a graph database, these types of queries can often be performed more efficiently than in a relational database because the relationships are stored and can be answered without joining data.
 
-**Examples:** Apache Cassandra, HBase, Google Bigtable
+This makes graph databases particuarly useful for applications involving complex relationships. For example, when recommending new people to follow or new content to view in a social media site. 
 
-**Strengths:** Very high write throughput and designed to scale across many machines with no single point of failure.
 
-**Weaknesses:** You usually have to design your tables around the exact queries you'll run. Ad-hoc queries and joins are poorly supported, and consistency is often relaxed ("eventual consistency").
+Like other NoSQL databases, graph databases can offer good scalability in some circumstances. However, their main advantage is their ability to model and query relationships.
 
-**Typical uses:** Logs, sensor and IoT data, messaging systems, activity feeds, very large datasets.
+The most well-known graph database is probably Neo4j.
 
-*Example:* Storing billions of temperature readings, grouped by sensor and time.
-
-## 4. Graph databases
-
-**How data is stored:** As **nodes** (things) and **edges** (relationships between them). Relationships are stored directly, so following them is fast.
-
-**Examples:** Neo4j, Amazon Neptune
-
-**Strengths:** Excellent when the connections between data are the main point of the query, such as "friends of friends" or "shortest route." These queries are slow and awkward with many joins in SQL.
-
-**Weaknesses:** A narrower use case, and harder to scale across many servers. They are less suited to simple, bulk data.
-
-**Typical uses:** Social networks, recommendation engines, fraud detection, route planning.
-
-*Example:* "Customers who bought this also bought..." by following purchase relationships.
-
-## Other types worth a mention
-
-- **Time-series databases** (InfluxDB, TimescaleDB) are optimised for data stamped with a time, such as metrics and sensor readings.
-- **Search engines** (Elasticsearch) are built for fast full-text search.
-
-These are sometimes counted as NoSQL, though they are more specialised.
-
-## Summary table
-
-| Type | Data model | Best for | Main trade-off |
-|---|---|---|---|
-| **Key-value** | Key → value | Caching, sessions | Lookup by key only |
-| **Document** | JSON-like documents | Flexible, varied data | Relationships and duplication |
-| **Wide-column** | Flexible rows, column families | Huge write volumes, scale | Query design is rigid |
-| **Graph** | Nodes and edges | Highly connected data | Narrow use case, harder to scale |
-
-## Key message for students
-
-Each type is built for a particular kind of problem, and none is "better" overall. Many real systems combine several, such as a relational database for orders, Redis for caching, and Elasticsearch for search. This is called **polyglot persistence**.
