@@ -1,3 +1,9 @@
+---
+layout: default
+title: Where Next?
+---
+
+
 # Where Next
 
 We have covered key relational databases subjects in the course. Here are some additional topics that we haven't had time to cover or are more advanced relational database topics.
@@ -10,6 +16,8 @@ Database security is concerned with ensuring only authorised users can access th
 
 Database security helps protect data from unauthorised modification or accidental loss.
 
+Users have to log in to the database server before running queries. We call this **authentication**. 
+
 We can create users and assign them passwords using SQL. For example:
 
 ```sql
@@ -17,7 +25,7 @@ CREATE USER learner
 WITH PASSWORD 'secret';
 ```
 
-Users have to log in before running queries. We call this **authentication**. When we did the lab work, a set-up script logged you into a PostgreSQL database automatically. 
+When we did the lab work, a set-up script logged you into a PostgreSQL database automatically. 
 
 Different types of user have different levels of access. We call this **authorisation**. For example:
 
@@ -34,7 +42,6 @@ TO lecturer;
 ```
 
 The `learner` user can only run `SELECT` queries on the database, whereas the `lecturer` user can perform full CRUD operations. 
-
 
 ## Full Text Search
 
@@ -63,6 +70,9 @@ ORDER BY score DESC;
 |Relational Databases and Web Integration| 0.95|
 |Data Analysis in Practice |0.81  |
 |Programming for Data Science| 0.76 |
+
+We can see the results assign a score based on how closely the text content matches the search term and these results are ranked from highest to lowest.
+
 
 ## More Topics to Explore
 - Set Operation such as `UNION` and `INTERSECT` for combining the results of multiple queries.

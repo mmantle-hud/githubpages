@@ -1,3 +1,7 @@
+---
+layout: default
+title: Limitations of Relational Databases
+---
 
 
 # Limitations of Relational Databases

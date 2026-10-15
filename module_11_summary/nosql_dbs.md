@@ -1,10 +1,15 @@
-# NoSQL databases
+---
+layout: default
+title: NoSQL databases
+---
+
+# NoSQL Databases
 
 "NoSQL" is not a specific type of database. Instead it is an umbrella term, used to describe types of database that differ from the relational model we have learnt about. 
 
 The following describes some of the most widely used types of NoSQL databases. 
 
-## Key-value stores
+## Key-value Stores
 
 Data is stored in a simple way as keys and values.
 
@@ -43,7 +48,7 @@ However, if we have a dataset that we always want to query in the same way e.g. 
 
 An example of a key-value store is Redis. 
 
-## Document databases
+## Document Databases
 
 A document database stores data as self-contained documents, typically represented using a JSON-like structure.
 
