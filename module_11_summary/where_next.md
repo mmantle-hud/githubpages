@@ -8,9 +8,9 @@ In the lab sessions we have always used a database that has been set-up for us. 
 
 Database security is concerned with ensuring only authorised users can access the right data and perform the right actions. 
 
-Database security helps protect data from unauthorised access, modification or accidental loss.
+Database security helps protect data from unauthorised modification or accidental loss.
 
-We can create users and assign them passwords using SQL
+We can create users and assign them passwords using SQL. For example:
 
 ```sql
 CREATE USER learner
@@ -33,10 +33,11 @@ ON ALL TABLES IN SCHEMA public
 TO lecturer;
 ```
 
-The `learner` user can only run `SELECT` queries on thedatabase, whereas the `lecturer` user can perform full CRUD operations. 
+The `learner` user can only run `SELECT` queries on the database, whereas the `lecturer` user can perform full CRUD operations. 
 
 
 ## Full Text Search
+
 We have considered pattern matching using the `LIKE` operator. However, this has some limitations. 
 - Doesn't understand related words
 - Slow on large amounts of text
@@ -44,7 +45,7 @@ We have considered pattern matching using the `LIKE` operator. However, this has
 
 PostgreSQL supports far more sophisticated text searching using something called `tsvector`. `tsvector` converts text into a searchable representation.
 
-This speeds up searching, and importantly PostgreSQL can rank results based on how closely text matches the search term.
+This speeds up searching, and importantly PostgreSQL can rank results based on how closely text matches the search term. To give you some idea, here's some example SQL.
 
 ```sql
 SELECT
@@ -56,7 +57,6 @@ SELECT
 FROM courses
 ORDER BY score DESC;
 ```
-
 
 | course_name | score |
 |--------|-------|

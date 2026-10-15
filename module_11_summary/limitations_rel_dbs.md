@@ -22,13 +22,13 @@ Instead, companies started scaling **horizontally**. They spread the data across
 
 The disadvantage of horizontal scaling is operations such as joins are difficult to make fast when data is spread across multiple machines. Furthermore, it is difficult to enforce ACID principles when data is distributed across multiple systems.
 
-In some circumstances, companies accepted weaker consistency guarantees in exchange for improved scalability, availability and performance.
+For some applications, companies accepted weaker consistency guarantees in exchange for improved scalability, availability and performance.
 
 ## NoSQL Databases
 
 In the late 2000s the term **NoSQL** was used for new types of databases such as key-value stores and document databases that weren't built around the strict relational model. NoSQL databases could offer advantages such as easier horizontal scaling, and greater schema flexibility.
 
-We will learn about some of these other types of database in the next set of reading.
+We will learn about some of these types of database in the next set of reading.
 
 ## Relational Databases Remain Popular
 

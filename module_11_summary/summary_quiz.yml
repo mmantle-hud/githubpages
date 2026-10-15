@@ -1,0 +1,107 @@
+questions:
+  - questionId: db_security_authentication_authorisation
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "In database security, what is the difference between authentication and authorisation?"
+    options:
+      - answer: "Authentication verifies a user's identity, while authorisation determines what actions the user is allowed to perform."
+        isCorrect: true
+        feedback: "Correct. Authentication is about proving identity; authorisation is about assigning permissions."
+      - answer: "Authentication assigns permissions to users, while authorisation verifies their identity."
+        isCorrect: false
+        feedback: "Incorrect. This reverses the definitions."
+      - answer: "Authentication and authorisation both refer to encrypting data before storage."
+        isCorrect: false
+        feedback: "Incorrect. Encryption is separate from authentication and authorisation."
+      - answer: "Authentication allows users to run SELECT queries, while authorisation allows INSERT, UPDATE, and DELETE."
+        isCorrect: false
+        feedback: "Incorrect. These are examples of permissions, not definitions."
+  - questionId: full_text_search_limitations_like
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Which of the following is a limitation of using the LIKE operator for text searching?"
+    options:
+      - answer: "LIKE does not understand related words and can be slow on large text."
+        isCorrect: true
+        feedback: "Correct. LIKE performs simple pattern matching and does not support linguistic features or ranking."
+      - answer: "LIKE automatically ranks results based on relevance."
+        isCorrect: false
+        feedback: "Incorrect. Ranking is a feature of PostgreSQL's full text search, not LIKE."
+      - answer: "LIKE converts text into a tsvector representation before searching."
+        isCorrect: false
+        feedback: "Incorrect. tsvector is used in full text search, not LIKE."
+      - answer: "LIKE only works on numeric columns."
+        isCorrect: false
+        feedback: "Incorrect. LIKE is used for text pattern matching."
+  - questionId: relational_db_vertical_scaling_limits
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is one major limitation of scaling a relational database vertically?"
+    options:
+      - answer: "Vertical scaling becomes very expensive and cannot continue indefinitely due to hardware limits."
+        isCorrect: true
+        feedback: "Correct. High-capacity machines are costly, and a single computer can only scale so far."
+      - answer: "Vertical scaling requires rewriting all SQL queries to support larger datasets."
+        isCorrect: false
+        feedback: "Incorrect. SQL queries do not need rewriting when scaling vertically."
+      - answer: "Vertical scaling prevents the use of ACID transactions."
+        isCorrect: false
+        feedback: "Incorrect. ACID properties remain fully supported in vertically scaled relational systems."
+      - answer: "Vertical scaling only works for NoSQL databases."
+        isCorrect: false
+        feedback: "Incorrect. Vertical scaling is traditionally associated with relational databases."
+  - questionId: horizontal_scaling_challenges
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is a disadvantage of scaling a database horizontally across many machines?"
+    options:
+      - answer: "Operations such as joins become difficult to make fast, and enforcing ACID guarantees is harder."
+        isCorrect: true
+        feedback: "Correct. Distributed data makes joins slower and strong consistency more challenging."
+      - answer: "Horizontal scaling requires all data to be stored in a single large table."
+        isCorrect: false
+        feedback: "Incorrect. Horizontal scaling distributes data across multiple machines, not a single table."
+      - answer: "Horizontal scaling eliminates the need for network communication between machines."
+        isCorrect: false
+        feedback: "Incorrect. Horizontal scaling increases the amount of network communication required."
+      - answer: "Horizontal scaling only works for relational databases with strict schemas."
+        isCorrect: false
+        feedback: "Incorrect. Horizontal scaling is often easier with NoSQL systems that support flexible schemas."
+  - questionId: nosql_key_value_characteristics
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is a key characteristic of key-value stores?"
+    options:
+      - answer: "They store data as unique keys with associated values and are extremely fast for lookups using the key."
+        isCorrect: true
+        feedback: "Correct. Key-value stores are optimised for fast retrieval using the key and scale easily across multiple machines."
+      - answer: "They enforce strict schemas and support complex joins between values."
+        isCorrect: false
+        feedback: "Incorrect. Key-value stores do not enforce schemas and do not support joins."
+      - answer: "They require all values to follow the relational table structure."
+        isCorrect: false
+        feedback: "Incorrect. Values can be structured in many different ways, such as dictionaries."
+      - answer: "They are designed primarily for querying nested arrays and hierarchical structures."
+        isCorrect: false
+        feedback: "Incorrect. That capability is more associated with document databases."
+  - questionId: nosql_document_flexible_schema
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is an advantage of document databases compared to relational databases?"
+    options:
+      - answer: "They allow documents in the same collection to have different fields, offering a flexible or schema-less design."
+        isCorrect: true
+        feedback: "Correct. Document databases do not enforce strict schemas, allowing variation between documents."
+      - answer: "They guarantee strict referential integrity through foreign keys."
+        isCorrect: false
+        feedback: "Incorrect. Document databases do not use traditional foreign keys or constraints."
+      - answer: "They prevent any duplication of data across documents."
+        isCorrect: false
+        feedback: "Incorrect. Data is often duplicated to make retrieval faster."
+      - answer: "They require all documents to contain identical fields and structure."
+        isCorrect: false
+        feedback: "Incorrect. Document databases explicitly allow differing fields between documents."
+
+
+
+

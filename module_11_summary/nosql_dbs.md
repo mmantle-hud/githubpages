@@ -2,7 +2,7 @@
 
 "NoSQL" is not a specific type of database. Instead it is an umbrella term, used to describe types of database that differ from the relational model we have learnt about. 
 
-The following describes some of the most widely used types on NoSQL databases. 
+The following describes some of the most widely used types of NoSQL databases. 
 
 ## Key-value stores
 

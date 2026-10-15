@@ -1,0 +1,70 @@
+questions:
+  - questionId: flask_psycopg2_connection_details
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What was the purpose of the psycopg2 connection block in app.py?"
+    options:
+      - answer: "It establishes a connection to the PostgreSQL database so Flask can run SQL queries and retrieve rows."
+        isCorrect: true
+        feedback: "Correct. The notes explain: 'This code uses the psycopg2 library to connect to our PostgreSQL database… We will interact with the PostgreSQL database using this connection.'"
+      - answer: "It automatically generates HTML templates based on the database schema."
+        isCorrect: false
+        feedback: "Incorrect. Templates are written manually and rendered using render_template()."
+      - answer: "It stores hotel data permanently inside Python dictionaries instead of the database."
+        isCorrect: false
+        feedback: "Incorrect. The notes emphasise replacing the hard-coded Python list with database queries."
+      - answer: "It configures Flask to run without needing a web server."
+        isCorrect: false
+        feedback: "Incorrect. The connection block is only for database access, not server configuration."
+  - questionId: flask_parameterised_query_hotel_details
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What was the purpose of using a placeholder like %s in the SQL query inside show_hotel()?"
+    options:
+      - answer: "It allows Flask to run a parameterised query where the hotel_id from the URL is safely inserted into the SQL command."
+        isCorrect: true
+        feedback: "Correct. The notes state: 'We put a placeholder (%s) in the query… The parameter (hotel_id) is bound to the placeholder (%s).' This is a parameterised query."
+      - answer: "It automatically sorts the results by star rating."
+        isCorrect: false
+        feedback: "Incorrect. Sorting must be done explicitly in SQL."
+      - answer: "It tells PostgreSQL to return all columns from every table."
+        isCorrect: false
+        feedback: "Incorrect. The SELECT statement determines which columns are returned."
+      - answer: "It prevents Flask from returning 404 errors."
+        isCorrect: false
+        feedback: "Incorrect. The notes show that 404 is returned when no matching hotel is found."
+  - questionId: flask_single_responsibility_principle
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "Why was app.py considered in need of refactoring?"
+    options:
+      - answer: "Because app.py was handling too many responsibilities, including routing, database setup, and running queries."
+        isCorrect: true
+        feedback: "Correct. app.py  became bloated: setting up the database, handling routing and running queries."
+      - answer: "Because Flask does not allow more than one route to be defined in a single file."
+        isCorrect: false
+        feedback: "Incorrect. Flask supports multiple routes in one file."
+      - answer: "Because Python cannot execute SQL code unless it is placed in a separate module."
+        isCorrect: false
+        feedback: "Incorrect. SQL can be executed anywhere in Python; the issue is maintainability, not capability."
+      - answer: "Because app.py must be renamed before database queries can run."
+        isCorrect: false
+        feedback: "Incorrect. The filename is not the problem; the issue is too much mixed responsibility."
+  - questionId: flask_g_object_connection_management
+    typeName: multipleChoice
+    shuffleOptions: true
+    prompt: "What is the advantage of storing the database connection on Flask's 'g' object, as described in the notes?"
+    options:
+      - answer: "Each request gets its own connection, preventing shared-connection problems and allowing reuse within the same request."
+        isCorrect: true
+        feedback: "Correct.'g' is special Flask generated, per-request storage. This allows us to maintain separate database connections for each request… later calls check if conn already exists, if it does, they use the existing g.conn.'"
+      - answer: "It automatically encrypts all SQL queries sent to the database."
+        isCorrect: false
+        feedback: "Incorrect. g does not provide encryption."
+      - answer: "It allows Flask to run SQL queries without needing psycopg2."
+        isCorrect: false
+        feedback: "Incorrect. psycopg2 is still required for PostgreSQL access."
+      - answer: "It ensures that all database queries are executed in parallel across multiple threads."
+        isCorrect: false
+        feedback: "Incorrect. g does not control threading or parallelism."
+
