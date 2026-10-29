@@ -2,6 +2,8 @@
 
 The final assessment is a quiz.
 
+The quiz will be open for a 48-hour window from 12:00PM 10th December 2026- 12:00PM 12th December 2026
+
 The quiz questions will test your understanding of the content we covered in **modules 1-7** and **module 11**. 
 
 There will be **no** questions about Modules 8,9 and 10 where we covered web development using Flask. 
