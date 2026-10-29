@@ -15,13 +15,13 @@ There are some small changes from the final design we looked at in Module 4.
 <pre class="mermaid">
 erDiagram
     languages ||--o{ movies : ""
-    movies ||--|{ genre_movie : ""
-    movies ||--o{ viewings : ""
-    movies ||--o{ reviews : ""
     movies ||--|| images : ""
-    genres ||--o{ genre_movie : ""
+    movies ||--o{ reviews : ""
+    movies ||--o{ viewings : ""
     users ||--o{ reviews : ""
     users ||--o{ viewings : ""
+    movies ||--|{ genre_movie : ""
+    genres ||--o{ genre_movie : ""
 
     users {
         INT user_id PK
