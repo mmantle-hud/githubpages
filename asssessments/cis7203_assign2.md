@@ -1,6 +1,6 @@
-# CIS7203 Assignment 3: Database Driven Web Application Report
+# CIS7203 Assignment 2: Database Driven Web Application Report
 
-- [CIS7203 Assignment 3: Database Driven Web Application Report](#cis7203-assignment-3-database-driven-web-application-report)
+- [CIS7203 Assignment 2: Database Driven Web Application Report](#cis7203-assignment-2-database-driven-web-application-report)
   - [General Information](#general-information)
   - [Arrangements for the Return of Work and Feedback](#arrangements-for-the-return-of-work-and-feedback)
   - [Assignment Specific Resources](#assignment-specific-resources)
@@ -20,6 +20,7 @@
 
 
 ## General Information
+
 |                          |                                      |
 | :----------------------- | :----------------------------------- |
 | Module Code              | CIS7203                              |
