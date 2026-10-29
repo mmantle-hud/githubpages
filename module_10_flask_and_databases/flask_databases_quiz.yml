@@ -1,21 +1,21 @@
 questions:
-  - questionId: flask_psycopg2_connection_details
+  - questionId: flask_psycopg2_purpose
     typeName: multipleChoice
     shuffleOptions: true
-    prompt: "What was the purpose of the psycopg2 connection block in app.py?"
+    prompt: "Why is the psycopg2 library used in the application?"
     options:
-      - answer: "It establishes a connection to the PostgreSQL database so Flask can run SQL queries and retrieve rows."
+      - answer: "It allows Python code to connect to and interact with a PostgreSQL database."
         isCorrect: true
-        feedback: "Correct. The notes explain: 'This code uses the psycopg2 library to connect to our PostgreSQL database… We will interact with the PostgreSQL database using this connection.'"
-      - answer: "It automatically generates HTML templates based on the database schema."
+        feedback: "Correct! psycopg2 provides the connection between Python and PostgreSQL."
+      - answer: "It converts Python code into SQL."
         isCorrect: false
-        feedback: "Incorrect. Templates are written manually and rendered using render_template()."
-      - answer: "It stores hotel data permanently inside Python dictionaries instead of the database."
+        feedback: "Incorrect. Developers still write SQL queries manually."
+      - answer: "It replaces Flask routing functionality."
         isCorrect: false
-        feedback: "Incorrect. The notes emphasise replacing the hard-coded Python list with database queries."
-      - answer: "It configures Flask to run without needing a web server."
+        feedback: "Incorrect. Flask continues to handle routing."
+      - answer: "It generates HTML pages from templates."
         isCorrect: false
-        feedback: "Incorrect. The connection block is only for database access, not server configuration."
+        feedback: "Incorrect. Jinja templates handle HTML generation."
   - questionId: flask_parameterised_query_hotel_details
     typeName: multipleChoice
     shuffleOptions: true

@@ -5,7 +5,7 @@ title: NoSQL databases
 
 # NoSQL Databases
 
-"NoSQL" is not a specific type of database. Instead it is an umbrella term, used to describe types of database that differ from the relational model we have learnt about. 
+"NoSQL" is not a specific type of database. Instead it is an umbrella term used to describe types of database that differ from the relational model we have learnt about. 
 
 The following describes some of the most widely used types of NoSQL databases. 
 
@@ -42,7 +42,7 @@ Key-value stores are designed to be queryed using the key.
 
 The advantage of key-value stores is they are extremely fast and they easily scale horizontally. We can distribute many records over several machines and it is fast to lookup records using the key. 
 
-The disadvantage is that complex queries based on the contents of the value, joins and aggregations are generally not possible or limited. 
+The disadvantage is complex queries based on the contents of the value, or queries involving joins and aggregations are often not supported or are limited. 
 
 However, if we have a dataset that we always want to query in the same way e.g. customer records that we always query using a customer ID, key-value stores can be a good fit. 
 
@@ -109,13 +109,13 @@ db.students.find({
 
 Unlike the relational model, documents in the same collection can have different fields e.g. the second document has a `course_rep` field. 
 
-We call this a flexible schema or schema-less design. Developers often still aim for consistency between documents, but the database does not enforce it in the same way as a relational database.
+We call this a **flexible schema** or **schema-less design**. Developers often still aim for consistency between documents, but the database does not enforce it in the same way as a relational database.
 
-Document databases are simpler than the relational model. For example, we don't have traditional constraints. Foreign keys and relationships between data are handled differently from relational databases. 
+Document databases are simpler than the relational model. For example, we don't have traditional constraints, and foreign keys and relationships between data are handled differently from relational databases. 
 
 Data is often duplicated in different documents. This offers the advantage that all of the data needed by an application can be retrieved from a single document, but this can also result in inconsistencies.  
 
-The advantage of document databases, like key-value stores, is that their simpler data model can make it easier to scale across multiple machines. We can distribute collections over several different machines. They can also be easier for programmers to work with as all the data for a particular object is neatly wrapped up in a single document, and there less need to do complex joins.  
+The advantage of document databases, like key-value stores, is their simpler data model can make it easier to scale. We can distribute collections over several different machines. They can also be easier for programmers to work with as all the data for a particular object is neatly wrapped up in a single document, and there less need to do complex joins.  
 
 A widely used document database is MongoDB. 
 
@@ -146,7 +146,7 @@ Relationships represent how those things are connected. Again, they can also con
 
 
 
-Here's an example:
+Here's a visualisation of how a graph database works:
 
 <pre class="mermaid">
 flowchart LR
