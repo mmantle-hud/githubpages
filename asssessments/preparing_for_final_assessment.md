@@ -1,4 +1,4 @@
-# Preparing for the Final Assessment
+# Preparing for the Quiz
 
 The final assessment is a quiz.
 
