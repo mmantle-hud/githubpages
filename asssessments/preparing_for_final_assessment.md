@@ -2,7 +2,7 @@
 
 The final assessment is a quiz.
 
-The quiz will be open for a 48-hour window from 12:00PM 10th December 2026- 12:00PM 12th December 2026
+The quiz will be open for a 48-hour window from 12:00PM 10th December 2026- 12:00PM 12th December 2026. The quiz will appear under 12.3.2 Final Assessment Quiz.
 
 The quiz questions will test your understanding of the content we covered in **modules 1-7** and **module 11**. 
 
