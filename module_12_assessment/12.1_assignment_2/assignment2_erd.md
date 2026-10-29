@@ -1,14 +1,14 @@
 # My Movie Diary Scenario
 
-The web application you develop should be based on the 'My Movie Diary' example we looked at in Module 4 of the course. 
+The web application you develop for Assignment 2 should be based on the 'My Movie Diary' example we looked at in Module 4 of the course. 
 
 The database will be provided for you in the lab. 
 
 A logical ERD for the database is shown below. 
 
 There are some small changes from the final design we looked at in Module 4. 
-- Added an `images` table to store filenames of movie poster images. Not all movies have an associated image. 
-- Added a surrogate key to viewings. This should make it easier to perform joins using this table. 
+- Added an `images` table to store filenames of movie poster images. Note that not all movies have an associated image. 
+- Added a surrogate key to `viewings`. This should make it easier to perform joins using this table. 
 
 **Updated Logical Model for the My Movie Diary Database**
 
