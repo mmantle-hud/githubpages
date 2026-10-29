@@ -40,8 +40,8 @@
 
 |                   |                    |
 | :---------------- | :----------------- |
-| Submission Date   | Friday 11th December 2026 |
-| Feedback Date     | Friday 29th January 2027 |
+| Submission Date   | Monday 7th December 2026 |
+| Feedback Date     | Monday 28th January 2027 |
 | Submission Time   | 12:00         |
 | Submission Method | Upload a .pdf or Word document to Coursera: **Submission Point for Assessment 2: Database Driven Web Application Report**         |
 
